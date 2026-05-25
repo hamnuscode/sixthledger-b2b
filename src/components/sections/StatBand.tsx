@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'framer-motion'
-import { Stagger, item } from '../ui/Reveal'
-import { motion } from 'framer-motion'
 
 const stats = [
   { value: '3+2', label: 'ACCA Qualified\n& Finalists', numeric: false },
@@ -32,29 +30,31 @@ export default function StatBand() {
   const inView = useInView(ref, { once: true, margin: '-40px 0px' })
 
   return (
-    <section ref={ref} className="bg-coal border-y border-smoke py-16" aria-label="Key figures">
+    <section ref={ref} className="border-b border-smoke" style={{ background: 'var(--coal)' }} aria-label="Key figures">
       <div className="container">
-        <Stagger className="grid grid-cols-2 md:grid-cols-4" stagger={0.1}>
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-smoke">
           {stats.map((stat, i) => (
-            <motion.div
+            <div
               key={stat.label}
-              variants={item}
-              className={`flex flex-col items-center justify-center py-8 px-8 text-center ${
-                i < stats.length - 1 ? 'md:border-r border-smoke' : ''
-              } ${i === 1 ? 'border-r border-smoke md:border-r' : ''}`}
+              className={`py-10 px-8 ${i === 0 ? 'pl-0' : ''} flex flex-col`}
             >
-              <span className="font-display text-5xl md:text-7xl text-pure" style={{ letterSpacing: '-0.03em' }}>
-                {stat.numeric ? <CountUp target={parseInt(stat.value)} active={inView} /> : stat.value}
+              <span
+                className="font-display text-pure block"
+                style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', letterSpacing: '-0.04em', lineHeight: '1' }}
+              >
+                {stat.numeric
+                  ? <CountUp target={parseInt(stat.value)} active={inView} />
+                  : stat.value}
               </span>
               <span
-                className="font-mono text-xs text-ash uppercase tracking-label mt-4 text-center leading-relaxed"
+                className="font-mono text-xs text-ash uppercase tracking-label mt-4 block leading-relaxed"
                 style={{ whiteSpace: 'pre-line' }}
               >
                 {stat.label}
               </span>
-            </motion.div>
+            </div>
           ))}
-        </Stagger>
+        </div>
       </div>
     </section>
   )

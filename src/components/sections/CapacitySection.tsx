@@ -14,8 +14,8 @@ const painPoints = [
   },
   {
     number: '03',
-    title: 'Hiring doesn\'t scale cleanly',
-    body: "A new hire takes three months to recruit and another three to become productive. By the time they\'re useful, peak season is over. And next year you do it again. The capacity problem is structural, not temporary.",
+    title: "Hiring doesn't scale cleanly",
+    body: "A new hire takes three months to recruit and another three to become productive. By the time they're useful, peak season is over. And next year you do it again. The capacity problem is structural, not temporary.",
   },
 ]
 
@@ -26,55 +26,57 @@ export default function CapacitySection() {
       aria-labelledby="capacity-heading"
     >
       <div className="container">
-        <Reveal className="max-w-3xl mb-20" delay={0.05}>
-          <p className="eyebrow mb-5">The problem we solve</p>
-          <h2
-            id="capacity-heading"
-            className="font-display text-4xl md:text-5xl text-pure mb-6"
-          >
-            Every UK practice hits the same{' '}
-            <span className="italic">capacity wall.</span>
-          </h2>
-          <p className="font-body text-bone text-base leading-loose">
-            The answer isn't another job board post. It's an extension of your team that's already
-            trained, already compliant, and already working UK hours.
-          </p>
+        {/* Section header with rule */}
+        <Reveal delay={0.05}>
+          <div className="flex items-end justify-between pb-8 mb-0 border-b border-smoke">
+            <div>
+              <p className="eyebrow mb-4">The problem we solve</p>
+              <h2
+                id="capacity-heading"
+                className="font-display text-4xl md:text-5xl text-pure max-w-2xl"
+                style={{ letterSpacing: '-0.03em' }}
+              >
+                Every UK practice hits the same{' '}
+                <span className="italic">capacity wall.</span>
+              </h2>
+            </div>
+            <p className="font-mono text-xs text-ash uppercase tracking-label hidden lg:block self-end pb-1">
+              3 pain points
+            </p>
+          </div>
         </Reveal>
 
-        <Stagger className="grid md:grid-cols-3 gap-px bg-smoke" stagger={0.1}>
+        {/* Pain point rows */}
+        <Stagger stagger={0.08}>
           {painPoints.map(point => (
             <motion.div
               key={point.number}
               variants={item}
-              className="bg-obsidian p-10 lg:p-14 flex flex-col gap-6 group hover:bg-coal transition-colors duration-200"
+              className="group grid md:grid-cols-12 gap-6 lg:gap-10 py-10 border-b border-smoke border-l-2 border-l-transparent hover:border-l-lime hover:bg-coal pl-4 hover:pl-8 transition-all duration-300 cursor-default"
             >
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xs text-lime tracking-label">{point.number}</span>
-                <div className="h-px flex-1 bg-smoke relative overflow-hidden">
-                  <div className="absolute left-0 top-0 h-px w-0 bg-lime group-hover:w-full transition-all duration-500" aria-hidden="true" />
-                </div>
+              <div className="md:col-span-1 flex-shrink-0">
+                <span className="font-mono text-xs text-lime uppercase tracking-label">{point.number}</span>
               </div>
-              <h3 className="font-display text-xl text-pure">{point.title}</h3>
-              <p className="font-body text-base text-bone leading-loose">{point.body}</p>
+              <div className="md:col-span-3">
+                <h3 className="font-display text-xl text-pure leading-snug">{point.title}</h3>
+              </div>
+              <div className="md:col-span-8">
+                <p className="font-body text-base text-bone leading-loose">{point.body}</p>
+              </div>
             </motion.div>
           ))}
         </Stagger>
 
-        <Reveal delay={0.3} type="fade">
-          <div className="mt-14 p-8 lg:p-10 border border-lime/30 rounded-sm bg-coal flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <div>
-              <p className="font-body text-sm text-pure font-medium mb-1">
-                There is a better model.
-              </p>
-              <p className="font-body text-xs text-bone leading-relaxed max-w-lg">
-                An ACCA-led team on your books — not freelancers, not a directory, not software.
-                A real accounting team that plugs in, does the work, and delivers it back to you
-                ready to review.
-              </p>
-            </div>
-            <span className="font-mono text-xs text-lime uppercase tracking-label flex-shrink-0">
+        {/* Resolution */}
+        <Reveal delay={0.25} type="fade">
+          <div className="mt-0 grid md:grid-cols-2 gap-10 items-center py-10 border-b border-smoke">
+            <p className="font-display text-xl text-pure italic leading-snug">
+              "There is a better model — a real accounting team that plugs in, does the work,
+              and delivers it back to you ready to review."
+            </p>
+            <p className="font-mono text-xs text-lime uppercase tracking-label md:text-right">
               White-label. Invisible. Ready now.
-            </span>
+            </p>
           </div>
         </Reveal>
       </div>

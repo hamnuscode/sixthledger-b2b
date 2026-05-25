@@ -3,126 +3,122 @@ import { services } from '../../data/services'
 
 export default function Footer() {
   return (
-    <footer className="bg-coal border-t border-smoke" role="contentinfo">
-      <div className="container py-20">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-16">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <Link to="/" aria-label="Sixth Ledger — Home">
+    <footer className="bg-obsidian border-t border-smoke" role="contentinfo">
+      <div className="container">
+        {/* Main grid */}
+        <div className="grid grid-cols-2 md:grid-cols-12 gap-0 divide-y md:divide-y-0 md:divide-x divide-smoke border-b border-smoke">
+          {/* Brand column */}
+          <div className="md:col-span-4 py-12 md:pr-12">
+            <Link to="/" aria-label="Sixth Ledger — Home" className="block mb-6">
               <img
                 src="/logo-black.png"
                 alt="Sixth Ledger"
-                className="h-7 w-auto mb-4"
+                className="h-6 w-auto"
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
             </Link>
-            <p className="font-body text-xs text-ash leading-relaxed mb-4">
-              ACCA-led accounting outsourcing for UK practices. White-label.
-              Compliant. UK working hours.
+            <p className="font-body text-sm text-ash leading-relaxed mb-6 max-w-xs">
+              ACCA-led accounting outsourcing for UK practices. White-label, compliant,
+              UK working hours.
             </p>
-            <p className="font-mono text-xs text-ash uppercase tracking-label">
-              ICO Reg:{' '}
-              <a
-                href="https://ico.org.uk/ESDWebPages/Entry/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-bone hover:text-lime transition-colors"
-              >
-                ZA — pending
-              </a>
-            </p>
-            <p className="font-mono text-xs text-ash uppercase tracking-label mt-1">
-              ACCA-led delivery
-            </p>
-          </div>
-
-          {/* Services col 1 */}
-          <div>
-            <p className="font-mono text-xs text-ash uppercase tracking-label mb-4">Services</p>
-            <ul className="space-y-2">
-              {services.slice(0, 5).map(s => (
-                <li key={s.id}>
-                  <Link
-                    to={`/services/${s.id}`}
-                    className="font-body text-xs text-bone hover:text-lime transition-colors"
-                  >
-                    {s.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services col 2 */}
-          <div>
-            <p className="font-mono text-xs text-ash uppercase tracking-label mb-4">&nbsp;</p>
-            <ul className="space-y-2">
-              {services.slice(5).map(s => (
-                <li key={s.id}>
-                  <Link
-                    to={`/services/${s.id}`}
-                    className="font-body text-xs text-bone hover:text-lime transition-colors"
-                  >
-                    {s.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <p className="font-mono text-xs text-ash uppercase tracking-label mb-4">Company</p>
-            <ul className="space-y-2">
-              {[
-                { to: '/about', label: 'About' },
-                { to: '/how-we-work', label: 'How We Work' },
-                { to: '/compliance', label: 'Compliance' },
-                { to: '/contact', label: 'Contact' },
-              ].map(item => (
-                <li key={item.to}>
-                  <Link to={item.to} className="font-body text-xs text-bone hover:text-lime transition-colors">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <p className="font-mono text-xs text-ash uppercase tracking-label mb-4">Contact</p>
-            <ul className="space-y-2">
-              <li>
-                <a href="mailto:info@sixthledger.com" className="font-body text-xs text-bone hover:text-lime transition-colors">
-                  info@sixthledger.com
+            <div className="space-y-1.5">
+              <p className="font-mono text-xs text-ash uppercase tracking-label">
+                ICO Reg:{' '}
+                <a
+                  href="https://ico.org.uk/ESDWebPages/Entry/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-bone hover:text-lime transition-colors"
+                >
+                  ZA — pending
                 </a>
-              </li>
-              <li>
-                <a href="tel:+923000692222" className="font-body text-xs text-bone hover:text-lime transition-colors">
-                  +92 300 0692222
-                </a>
-              </li>
-              <li>
-                <address className="font-body text-xs text-ash not-italic leading-relaxed">
-                  Emaar Canyon Views<br />Islamabad, Pakistan
-                </address>
-              </li>
-              <li className="pt-1">
-                <span className="font-mono text-xs text-ash uppercase tracking-label">
-                  Mon–Fri · UK hours
-                </span>
-              </li>
-            </ul>
+              </p>
+              <p className="font-mono text-xs text-ash uppercase tracking-label">ACCA-led delivery</p>
+              <p className="font-mono text-xs text-ash uppercase tracking-label">Mon–Fri · UK hours</p>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div className="col-span-2 md:col-span-4 py-12 md:px-12">
+            <p className="font-mono text-xs text-ash uppercase tracking-label mb-6">Services</p>
+            <div className="grid grid-cols-2 gap-x-8">
+              <ul className="space-y-2">
+                {services.slice(0, 5).map(s => (
+                  <li key={s.id}>
+                    <Link
+                      to={`/services/${s.id}`}
+                      className="font-body text-sm text-bone hover:text-lime transition-colors flex items-center gap-2 group"
+                    >
+                      <span className="font-mono text-xs text-ash/60 group-hover:text-lime/60 transition-colors">{s.number}</span>
+                      {s.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-2">
+                {services.slice(5).map(s => (
+                  <li key={s.id}>
+                    <Link
+                      to={`/services/${s.id}`}
+                      className="font-body text-sm text-bone hover:text-lime transition-colors flex items-center gap-2 group"
+                    >
+                      <span className="font-mono text-xs text-ash/60 group-hover:text-lime/60 transition-colors">{s.number}</span>
+                      {s.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Company + Contact */}
+          <div className="col-span-2 md:col-span-4 py-12 md:pl-12 grid grid-cols-2 gap-8">
+            <div>
+              <p className="font-mono text-xs text-ash uppercase tracking-label mb-6">Company</p>
+              <ul className="space-y-2">
+                {[
+                  { to: '/about', label: 'About' },
+                  { to: '/how-we-work', label: 'How We Work' },
+                  { to: '/compliance', label: 'Compliance' },
+                  { to: '/contact', label: 'Contact' },
+                ].map(item => (
+                  <li key={item.to}>
+                    <Link to={item.to} className="font-body text-sm text-bone hover:text-lime transition-colors">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="font-mono text-xs text-ash uppercase tracking-label mb-6">Contact</p>
+              <ul className="space-y-2">
+                <li>
+                  <a href="mailto:info@sixthledger.com" className="font-body text-sm text-bone hover:text-lime transition-colors">
+                    info@sixthledger.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+923000692222" className="font-body text-sm text-bone hover:text-lime transition-colors">
+                    +92 300 0692222
+                  </a>
+                </li>
+                <li>
+                  <address className="font-body text-xs text-ash not-italic leading-relaxed">
+                    Emaar Canyon Views<br />Islamabad, Pakistan
+                  </address>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Bottom strip */}
-        <div className="border-t border-smoke pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-6">
           <p className="font-mono text-xs text-ash uppercase tracking-label">
-            © {new Date().getFullYear()} SIXTHLEDGER (PVT) LTD · Designed for UK practices
+            © {new Date().getFullYear()} SIXTHLEDGER (PVT) LTD
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-6">
             {[
               { to: '/privacy', label: 'Privacy Policy' },
               { to: '/terms', label: 'Terms' },

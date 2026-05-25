@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
-import { Reveal, Stagger, itemScale } from '../ui/Reveal'
+import { Reveal, Stagger, item } from '../ui/Reveal'
 
 const models = [
   {
@@ -16,6 +16,7 @@ const models = [
       'Ideal for seasonal and variable demand',
     ],
     cta: 'Book a discovery call',
+    recommended: false,
   },
   {
     eyebrow: '02 — Most common',
@@ -27,7 +28,7 @@ const models = [
       'Defined scope per engagement letter',
       'Priority turnaround included',
       'Monthly reporting on work delivered',
-      'Scales up with 30 days\' notice',
+      "Scales up with 30 days' notice",
     ],
     cta: 'Book a discovery call',
     recommended: true,
@@ -45,66 +46,57 @@ const models = [
       'Pricing by arrangement',
     ],
     cta: 'Talk to us',
+    recommended: false,
   },
 ]
 
 export default function EngagementModels() {
   return (
-    <section className="section bg-obsidian" aria-labelledby="engagement-heading" id="engagement">
+    <section className="section bg-obsidian border-t border-smoke" aria-labelledby="engagement-heading" id="engagement">
       <div className="container">
-        <Reveal className="max-w-3xl mb-20" delay={0.05}>
-          <p className="eyebrow mb-5">How we engage</p>
-          <h2
-            id="engagement-heading"
-            className="font-display text-4xl md:text-5xl text-pure mb-5"
-          >
-            Three ways to{' '}
-            <span className="italic">work with us.</span>
-          </h2>
-          <p className="font-body text-bone text-base leading-loose">
-            We don't publish rate cards — every practice is different. What we do publish is how
-            the engagement models work, so you know what to expect before the call.
-          </p>
+        <Reveal delay={0.05}>
+          <div className="flex items-end justify-between pb-10 border-b border-smoke mb-0">
+            <div>
+              <p className="eyebrow mb-4">How we engage</p>
+              <h2
+                id="engagement-heading"
+                className="font-display text-4xl md:text-5xl text-pure mb-3"
+                style={{ letterSpacing: '-0.03em' }}
+              >
+                Three ways to{' '}
+                <span className="italic">work with us.</span>
+              </h2>
+              <p className="font-body text-bone text-base leading-loose max-w-xl">
+                We don't publish rate cards — every practice is different.
+                Specific pricing confirmed at the discovery call.
+              </p>
+            </div>
+          </div>
         </Reveal>
 
-        <Stagger className="grid md:grid-cols-3 gap-8" stagger={0.1}>
+        <Stagger className="grid md:grid-cols-3 divide-x divide-smoke" stagger={0.08}>
           {models.map(model => (
             <motion.div
               key={model.name}
-              variants={itemScale}
-              className={`relative flex flex-col rounded-sm border transition-all duration-300 hover:-translate-y-1 ${
-                model.recommended
-                  ? 'border-lime shadow-lime hover:shadow-[0_0_60px_rgba(200,232,74,0.22)]'
-                  : 'border-smoke hover:border-smoke/60 hover:shadow-lg'
+              variants={item}
+              className={`group flex flex-col border-t-4 transition-colors duration-200 hover:bg-coal ${
+                model.recommended ? 'border-t-lime' : 'border-t-smoke hover:border-t-lime/40'
               }`}
-              style={{ background: 'var(--coal)' }}
             >
-              {model.recommended && (
-                <div className="absolute -top-px left-0 right-0 h-px bg-lime" aria-hidden="true" />
-              )}
-              {model.recommended && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="font-mono text-xs bg-lime text-obsidian px-3 py-0.5 uppercase tracking-label rounded-full">
-                    Most common
-                  </span>
-                </div>
-              )}
-
               <div className="p-8 flex-1 flex flex-col gap-6">
                 <div>
-                  <p className="eyebrow text-ash mb-2">{model.eyebrow}</p>
-                  <h3 className="font-display text-2xl text-pure">{model.name}</h3>
-                  <p className="font-body text-sm text-lime font-medium mt-1.5">{model.tagline}</p>
-                  <p className="font-body text-sm text-bone leading-relaxed mt-3">{model.description}</p>
+                  <p className="font-mono text-xs text-ash uppercase tracking-label mb-3">{model.eyebrow}</p>
+                  <h3 className="font-display text-2xl text-pure mb-2">{model.name}</h3>
+                  <p className="font-body text-sm text-lime leading-snug">{model.tagline}</p>
                 </div>
 
-                <ul className="space-y-2.5 flex-1">
+                <p className="font-body text-sm text-bone leading-relaxed">{model.description}</p>
+
+                <ul className="space-y-3 flex-1">
                   {model.features.map(feature => (
-                    <li key={feature} className="flex items-start gap-2.5">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0 mt-0.5 text-lime" aria-hidden="true">
-                        <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span className="font-body text-sm text-bone leading-relaxed">{feature}</span>
+                    <li key={feature} className="flex items-start gap-3">
+                      <span className="font-mono text-lime text-xs mt-0.5 flex-shrink-0">—</span>
+                      <span className="font-body text-sm text-bone leading-snug">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -114,7 +106,7 @@ export default function EngagementModels() {
                     to="/contact"
                     variant={model.recommended ? 'primary' : 'ghost'}
                     size="md"
-                    className="w-full"
+                    className="w-full justify-center"
                   >
                     {model.cta}
                   </Button>
@@ -125,8 +117,8 @@ export default function EngagementModels() {
         </Stagger>
 
         <Reveal delay={0.2} type="fade">
-          <p className="font-mono text-xs text-ash text-center mt-8 uppercase tracking-label">
-            Specific pricing confirmed at discovery call based on your client mix and volume
+          <p className="font-mono text-xs text-ash mt-8 uppercase tracking-label">
+            — Specific pricing confirmed at discovery call based on your client mix and volume
           </p>
         </Reveal>
       </div>

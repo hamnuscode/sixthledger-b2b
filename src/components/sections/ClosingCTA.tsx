@@ -4,72 +4,65 @@ import Button from '../ui/Button'
 export default function ClosingCTA() {
   return (
     <section
-      className="section bg-obsidian border-t border-smoke relative overflow-hidden"
+      className="section bg-obsidian border-t border-smoke"
       aria-labelledby="closing-cta-heading"
     >
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 100%, rgba(200,232,74,0.05) 0%, transparent 70%)' }}
-        aria-hidden="true"
-      />
-
-      <div className="container text-center relative z-10">
+      <div className="container">
+        {/* Header line */}
         <Reveal delay={0.05} type="fade">
-          <p className="eyebrow mb-5">Get started</p>
-        </Reveal>
-
-        <Reveal delay={0.12}>
-          <h2
-            id="closing-cta-heading"
-            className="font-display text-5xl md:text-6xl lg:text-7xl text-pure mb-8 max-w-3xl mx-auto"
-            style={{ letterSpacing: '-0.03em' }}
-          >
-            One trial job.{' '}
-            <span className="italic">That's the whole ask.</span>
-          </h2>
-        </Reveal>
-
-        <Reveal delay={0.22}>
-          <p className="font-body text-bone text-lg leading-loose mb-12 max-w-xl mx-auto">
-            Give us one job from one client. Review the output against your own standards.
-            Decide from there. No contract, no commitment until you are satisfied.
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.3}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-10">
-            <Button to="/contact" size="lg">Book a 20-minute call</Button>
-            <Button to="/how-we-work" variant="ghost" size="lg">See how we work</Button>
+          <div className="flex items-center justify-between pb-8 border-b border-smoke mb-16">
+            <p className="eyebrow">Get started</p>
+            <div className="flex items-center gap-6">
+              <a href="mailto:info@sixthledger.com" className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label">
+                info@sixthledger.com
+              </a>
+              <span className="text-smoke/60 hidden sm:block" aria-hidden="true">/</span>
+              <a href="tel:+923000692222" className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label hidden sm:block">
+                +92 300 0692222
+              </a>
+            </div>
           </div>
         </Reveal>
 
-        <Reveal delay={0.4} type="fade">
-          <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 pt-8 border-t border-smoke"
-            aria-label="Direct contact options"
+        {/* Giant headline */}
+        <Reveal delay={0.1}>
+          <h2
+            id="closing-cta-heading"
+            className="font-display text-pure mb-0"
+            style={{
+              fontSize: 'clamp(3rem, 8vw, 7rem)',
+              letterSpacing: '-0.04em',
+              lineHeight: '0.92',
+            }}
           >
-            <a href="mailto:info@sixthledger.com" className="flex items-center gap-2 text-ash hover:text-lime transition-colors">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <rect x="1" y="2.5" width="12" height="9" rx="1" stroke="currentColor" strokeWidth="1.2" />
-                <path d="M1 4l6 4.5L13 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-              </svg>
-              <span className="font-body text-xs">info@sixthledger.com</span>
-            </a>
-            <span className="hidden sm:block text-smoke" aria-hidden="true">·</span>
-            <a href="tel:+923000692222" className="flex items-center gap-2 text-ash hover:text-lime transition-colors">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M2 2h3l1.5 3.5L5 7a9 9 0 003 3l1.5-1.5L13 10v3a1 1 0 01-1 1A11 11 0 012 2z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
-              </svg>
-              <span className="font-body text-xs">+92 300 0692222</span>
-            </a>
-            <span className="hidden sm:block text-smoke" aria-hidden="true">·</span>
-            <span className="flex items-center gap-2 text-ash">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2" />
-                <path d="M7 4v3l2 1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-              </svg>
-              <span className="font-body text-xs">UK business hours, Mon–Fri</span>
+            One trial job.
+            <br />
+            <span className="italic" style={{ color: 'var(--ash)' }}>
+              That's the whole ask.
             </span>
+          </h2>
+        </Reveal>
+
+        {/* Bottom bar */}
+        <Reveal delay={0.2}>
+          <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-smoke mt-12">
+            <p className="font-body text-bone text-lg leading-loose">
+              Give us one job from one client. Review the output against your own standards.
+              Decide from there. No contract, no commitment until you are satisfied.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start gap-5">
+              <Button to="/contact" size="lg">Book a 20-minute call</Button>
+              <Button to="/how-we-work" variant="ghost" size="lg">See how we work →</Button>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Footer strip */}
+        <Reveal delay={0.3} type="fade">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 mt-12 pt-8 border-t border-smoke/40">
+            <span className="font-mono text-xs text-ash uppercase tracking-label">Mon–Fri · UK working hours</span>
+            <span className="font-mono text-xs text-ash uppercase tracking-label">Response within 1 business day</span>
+            <span className="font-mono text-xs text-ash uppercase tracking-label">DPA signed before work starts</span>
           </div>
         </Reveal>
       </div>

@@ -8,7 +8,7 @@ const complianceItems = [
     badge: 'ICO',
     title: 'ICO Registered',
     subtitle: "UK Information Commissioner's Office",
-    body: "Sixth Ledger is registered with the UK Information Commissioner's Office as a data controller. UK accounting practices performing vendor due diligence can verify our registration on the ICO public register. Our registration number is displayed in the footer of every page.",
+    body: "Sixth Ledger is registered with the UK Information Commissioner's Office as a data controller. UK accounting practices performing vendor due diligence can verify our registration on the ICO public register.",
     link: 'https://ico.org.uk/ESDWebPages/Entry/',
     linkText: 'Verify on ICO public register →',
   },
@@ -24,7 +24,7 @@ const complianceItems = [
     badge: 'IDTA',
     title: 'IDTA-Ready',
     subtitle: 'International Data Transfer Agreement',
-    body: 'As a Pakistan-based processor of UK client data, we operate under IDTA-compatible transfer mechanisms. Our standard DPA includes the necessary IDTA provisions. UK practices whose own clients ask about international data transfers can receive our full IDTA documentation on request.',
+    body: 'As a Pakistan-based processor of UK client data, we operate under IDTA-compatible transfer mechanisms. Our standard DPA includes the necessary IDTA provisions. UK practices can receive our full IDTA documentation on request.',
     link: '/compliance',
     linkText: 'Request our GDPR pack →',
   },
@@ -49,21 +49,29 @@ const complianceItems = [
 export default function Compliance() {
   return (
     <>
-      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
+      <section className="pt-40 pb-24 bg-obsidian border-b border-smoke">
         <div className="container">
-          <nav aria-label="Breadcrumb" className="mb-6">
+          <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
               <li><Link to="/" className="hover:text-lime transition-colors">Home</Link></li>
               <li aria-hidden="true">/</li>
               <li className="text-bone">Compliance</li>
             </ol>
           </nav>
-          <p className="eyebrow mb-4">Compliance</p>
-          <h1 className="font-display text-5xl md:text-6xl text-pure mb-6 max-w-3xl" style={{ letterSpacing: '-0.03em' }}>
-            Everything your due diligence{' '}
-            <span className="italic">requires.</span>
-          </h1>
-          <p className="font-body text-bone text-lg max-w-2xl leading-loose">
+          <div className="flex items-end justify-between border-b border-smoke pb-8 mb-8">
+            <div>
+              <p className="eyebrow mb-4">Compliance</p>
+              <h1
+                className="font-display text-5xl md:text-6xl text-pure max-w-3xl"
+                style={{ letterSpacing: '-0.03em' }}
+              >
+                Everything your due diligence{' '}
+                <span className="italic">requires.</span>
+              </h1>
+            </div>
+            <p className="font-mono text-xs text-ash uppercase tracking-label hidden md:block pb-1">05 credentials</p>
+          </div>
+          <p className="font-body text-bone text-lg leading-loose max-w-2xl">
             UK accounting practices have an obligation to verify the compliance posture of any
             partner who handles client data. Here is ours, in full. Every document listed below
             is available on request within one business day.
@@ -71,96 +79,96 @@ export default function Compliance() {
         </div>
       </section>
 
+      {/* Credentials — row list */}
       <section className="section bg-obsidian" aria-label="Compliance credentials">
         <div className="container">
-          <div className="space-y-0 border border-smoke rounded-sm overflow-hidden">
-            <Stagger stagger={0.08}>
-              {complianceItems.map((item_, i) => (
-                <motion.div
-                  key={item_.badge}
-                  variants={item}
-                  className={`grid md:grid-cols-4 gap-6 p-8 hover:bg-coal transition-colors duration-200 ${
-                    i < complianceItems.length - 1 ? 'border-b border-smoke' : ''
-                  }`}
-                >
-                  <div className="md:col-span-1">
-                    <span className="font-mono text-xs text-lime uppercase tracking-label">{item_.badge}</span>
-                    <h2 className="font-display text-lg text-pure mt-2 mb-1">{item_.title}</h2>
-                    <p className="font-body text-xs text-ash leading-relaxed">{item_.subtitle}</p>
-                  </div>
-                  <div className="md:col-span-3">
-                    <p className="font-body text-sm text-bone leading-relaxed mb-4">{item_.body}</p>
-                    <a
-                      href={item_.link}
-                      className="font-mono text-xs text-lime hover:underline uppercase tracking-label"
-                      target={item_.link.startsWith('http') ? '_blank' : undefined}
-                      rel={item_.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    >
-                      {item_.linkText}
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
-            </Stagger>
-          </div>
+          <Stagger stagger={0.07}>
+            {complianceItems.map((item_) => (
+              <motion.div
+                key={item_.badge}
+                variants={item}
+                className="group grid md:grid-cols-12 gap-6 lg:gap-10 py-10 border-b border-smoke border-l-2 border-l-transparent hover:border-l-lime hover:bg-coal pl-4 hover:pl-8 transition-all duration-200 cursor-default"
+              >
+                {/* Badge + title */}
+                <div className="md:col-span-3">
+                  <p className="font-mono text-xs text-lime uppercase tracking-label mb-2">{item_.badge}</p>
+                  <h2 className="font-display text-xl text-pure mb-1">{item_.title}</h2>
+                  <p className="font-mono text-xs text-ash uppercase tracking-label leading-snug">{item_.subtitle}</p>
+                </div>
+
+                {/* Body */}
+                <div className="md:col-span-7">
+                  <p className="font-body text-base text-bone leading-loose">{item_.body}</p>
+                </div>
+
+                {/* Link */}
+                <div className="md:col-span-2 flex items-start justify-end">
+                  <a
+                    href={item_.link}
+                    className="font-mono text-xs text-lime hover:underline uppercase tracking-label text-right"
+                    target={item_.link.startsWith('http') ? '_blank' : undefined}
+                    rel={item_.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    {item_.linkText}
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </Stagger>
         </div>
       </section>
 
       {/* GDPR Pack */}
-      <section className="section bg-coal border-t border-smoke">
+      <section className="section border-t border-smoke" style={{ background: 'var(--coal)' }}>
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             <Reveal delay={0.05}>
-              <p className="eyebrow mb-4">Due diligence</p>
-              <h2 className="font-display text-3xl text-pure mb-4">
+              <p className="eyebrow mb-5">Due diligence</p>
+              <h2
+                className="font-display text-4xl md:text-5xl text-pure mb-6"
+                style={{ letterSpacing: '-0.025em' }}
+              >
                 Request our GDPR pack
               </h2>
-              <p className="font-body text-bone text-sm leading-relaxed mb-4">
+              <p className="font-body text-bone text-base leading-loose mb-4">
                 For practices that require formal documentation before engaging — or need
                 to satisfy their own professional indemnity insurer — we provide a full
                 GDPR pack on request. Delivered within one business day.
               </p>
-              <p className="font-body text-bone text-sm leading-relaxed">
+              <p className="font-body text-bone text-base leading-loose mb-8">
                 The pack includes everything you need for vendor due diligence,
                 client-facing assurance, and regulatory compliance review.
               </p>
+              <Button to="/contact" size="md">Request GDPR pack →</Button>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="bg-obsidian border border-smoke rounded-sm p-6">
-                <h3 className="font-display text-xl text-pure mb-5">GDPR pack contents</h3>
-                <ul className="space-y-3">
-                  {[
-                    'Privacy Policy',
-                    'Data Processing Agreement (DPA) template',
-                    'Sub-processor list',
-                    'IDTA-compatible transfer clauses',
-                    'ICO registration confirmation',
-                    'Data retention schedule',
-                    'Data breach notification procedure',
-                    'Subject access request procedure',
-                  ].map(i => (
-                    <li key={i} className="flex items-center gap-2.5">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0 text-lime" aria-hidden="true">
-                        <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span className="font-body text-xs text-bone">{i}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <Button to="/contact" size="sm" variant="outline" className="w-full">
-                    Request GDPR pack
-                  </Button>
-                </div>
+              <p className="eyebrow mb-6">Pack contents</p>
+              <div className="space-y-0">
+                {[
+                  'Privacy Policy',
+                  'Data Processing Agreement (DPA) template',
+                  'Sub-processor list',
+                  'IDTA-compatible transfer clauses',
+                  'ICO registration confirmation',
+                  'Data retention schedule',
+                  'Data breach notification procedure',
+                  'Subject access request procedure',
+                ].map((doc, i) => (
+                  <div key={doc} className="flex items-baseline gap-5 py-3.5 border-b border-smoke/40 last:border-b-0">
+                    <span className="font-mono text-xs text-lime w-6 flex-shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="font-body text-sm text-bone">{doc}</span>
+                  </div>
+                ))}
               </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      <section className="py-10 bg-obsidian border-t border-smoke">
+      {/* Legal links */}
+      <section className="py-10 border-t border-smoke bg-obsidian">
         <div className="container">
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-8">
             <p className="font-mono text-xs text-ash uppercase tracking-label">Legal pages:</p>
             {[
               { to: '/privacy', label: 'Privacy Policy' },

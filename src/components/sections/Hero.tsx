@@ -1,118 +1,81 @@
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
-import VSLPlayer from './VSLPlayer'
 
 const EASE = [0.16, 1, 0.3, 1]
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center pt-24 pb-28 overflow-hidden"
-      style={{ background: 'var(--obsidian)' }}
+      className="relative overflow-hidden"
+      style={{ background: 'var(--obsidian)', paddingTop: '8rem', paddingBottom: '6rem' }}
       aria-labelledby="hero-headline"
     >
-      {/* Radial lime glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse 80% 60% at 30% 50%, rgba(200,232,74,0.035) 0%, transparent 70%)',
-        }}
-        aria-hidden="true"
-      />
+      <div className="container">
+        {/* Top meta strip */}
+        <motion.div
+          className="flex items-center justify-between pb-5 mb-12 border-b border-smoke"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+        >
+          <p className="eyebrow">— For UK accounting practices</p>
+          <p className="font-mono text-xs text-ash uppercase tracking-label hidden md:block">
+            ACCA-Led · ICO Registered · UK GDPR
+          </p>
+        </motion.div>
 
-      {/* Subtle dot-grid */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{
-          backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-        }}
-        aria-hidden="true"
-      />
+        {/* Massive headline */}
+        <motion.h1
+          id="hero-headline"
+          className="font-display text-pure mb-12"
+          style={{
+            fontSize: 'clamp(3rem, 8.5vw, 8rem)',
+            letterSpacing: '-0.04em',
+            lineHeight: '0.92',
+          }}
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: EASE, delay: 0.12 }}
+        >
+          Hand us the work.
+          <br />
+          <span className="italic" style={{ color: 'var(--ash)' }}>Keep your clients.</span>
+        </motion.h1>
 
-      <div className="container relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
-          {/* Left: copy */}
-          <div className="max-w-2xl">
-            <motion.p
-              className="eyebrow mb-6"
-              aria-hidden="true"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, ease: EASE, delay: 0.05 }}
-            >
-              — For UK accounting practices
-            </motion.p>
-
-            <motion.h1
-              id="hero-headline"
-              className="font-display text-5xl sm:text-6xl lg:text-[5.5rem] leading-none text-pure mb-8"
-              style={{ letterSpacing: '-0.02em' }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
-            >
-              Hand us the work.{' '}
-              <span className="italic text-pure">Keep your clients.</span>
-            </motion.h1>
-
-            <motion.p
-              className="font-body text-bone text-xl leading-loose mb-10 max-w-xl"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, ease: EASE, delay: 0.28 }}
-            >
+        {/* Bottom grid: subtext + CTAs */}
+        <motion.div
+          className="grid md:grid-cols-2 gap-12 pt-10 border-t border-smoke"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: EASE, delay: 0.32 }}
+        >
+          <div>
+            <p className="font-body text-bone text-xl leading-loose max-w-lg">
               An ACCA-led team that operates as an invisible extension of your practice.
               White-label by default. Compliant by design. UK working hours.
-            </motion.p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 mb-10"
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: EASE, delay: 0.4 }}
-            >
-              <Button to="/contact" size="lg">
-                Book a 20-minute call
-              </Button>
-              <Button to="/how-we-work" variant="ghost" size="lg">
-                See how we work
-              </Button>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-wrap items-center gap-x-4 gap-y-1"
-              aria-label="Compliance credentials"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.56 }}
-            >
-              {['ICO Registered', 'ACCA-Led', 'UK GDPR Compliant', 'IDTA-Ready'].map(
-                (item, i) => (
-                  <span key={item} className="flex items-center gap-4">
-                    {i > 0 && (
-                      <span className="text-smoke text-xs" aria-hidden="true">·</span>
-                    )}
-                    <span className="font-mono text-xs text-ash uppercase tracking-label">
-                      {item}
-                    </span>
-                  </span>
-                )
-              )}
-            </motion.div>
+            </p>
           </div>
+          <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-start gap-5">
+            <Button to="/contact" size="lg">Book a 20-minute call</Button>
+            <Button to="/how-we-work" variant="ghost" size="lg">How we work →</Button>
+          </div>
+        </motion.div>
 
-          {/* Right: VSL player */}
-          <motion.div
-            className="w-full"
-            initial={{ opacity: 0, scale: 0.97, y: 12 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.22 }}
-          >
-            <VSLPlayer />
-          </motion.div>
-        </div>
+        {/* Compliance strip */}
+        <motion.div
+          className="flex flex-wrap gap-x-6 gap-y-2 mt-10 pt-8 border-t border-smoke/40"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.54 }}
+          aria-label="Compliance credentials"
+        >
+          {['ICO Registered', 'ACCA-Led', 'UK GDPR Compliant', 'IDTA-Ready', 'MTD Ready'].map((item, i) => (
+            <span key={item} className="flex items-center gap-3">
+              {i > 0 && <span className="text-smoke/60 font-mono" aria-hidden="true">/</span>}
+              <span className="font-mono text-xs text-ash uppercase tracking-label">{item}</span>
+            </span>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

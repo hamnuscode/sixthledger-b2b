@@ -26,39 +26,48 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="section bg-obsidian" aria-labelledby="why-heading">
+    <section className="section bg-obsidian border-t border-smoke" aria-labelledby="why-heading">
       <div className="container">
-        <Reveal className="max-w-3xl mb-20" delay={0.05}>
-          <p className="eyebrow mb-5">Why Sixth Ledger</p>
-          <h2
-            id="why-heading"
-            className="font-display text-4xl md:text-5xl text-pure"
-          >
-            What makes us{' '}
-            <span className="italic">different</span>
-          </h2>
+        {/* Header */}
+        <Reveal delay={0.05}>
+          <div className="flex items-end justify-between pb-10 border-b border-smoke mb-0">
+            <div>
+              <p className="eyebrow mb-4">Why Sixth Ledger</p>
+              <h2
+                id="why-heading"
+                className="font-display text-4xl md:text-5xl text-pure"
+                style={{ letterSpacing: '-0.03em' }}
+              >
+                What makes us{' '}
+                <span className="italic">different</span>
+              </h2>
+            </div>
+            <span className="font-mono text-xs text-ash uppercase tracking-label hidden lg:block pb-1">
+              4 differentiators
+            </span>
+          </div>
         </Reveal>
 
-        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-smoke" stagger={0.1}>
+        {/* 2×2 typographic grid */}
+        <Stagger className="grid md:grid-cols-2 divide-x divide-smoke" stagger={0.1}>
           {reasons.map((reason, i) => (
             <motion.div
               key={reason.numeral}
               variants={item}
-              className={`p-10 flex flex-col gap-6 group transition-colors duration-200 hover:bg-coal ${
-                i < reasons.length - 1 ? 'border-r border-smoke' : ''
-              } border-b sm:border-b-0`}
+              className={`group p-10 ${i < 2 ? 'border-b border-smoke' : ''} hover:bg-coal transition-colors duration-200 cursor-default`}
             >
-              <div className="h-px bg-smoke relative overflow-hidden">
-                <div
-                  className="absolute left-0 top-0 w-8 h-px bg-lime transition-all duration-500 group-hover:w-full"
-                  aria-hidden="true"
-                />
-              </div>
-              <span className="font-display text-2xl text-ash italic group-hover:text-lime transition-colors duration-200" aria-hidden="true">
+              <span
+                className="font-display text-6xl text-smoke/20 italic leading-none block mb-6 group-hover:text-smoke/40 transition-colors duration-300"
+                aria-hidden="true"
+              >
                 {reason.numeral}
               </span>
-              <h3 className="font-display text-xl text-pure leading-snug">{reason.title}</h3>
-              <p className="font-body text-base text-bone leading-loose">{reason.body}</p>
+              <h3 className="font-display text-2xl text-pure mb-4 leading-snug">
+                {reason.title}
+              </h3>
+              <p className="font-body text-base text-bone leading-loose">
+                {reason.body}
+              </p>
             </motion.div>
           ))}
         </Stagger>

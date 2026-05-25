@@ -4,37 +4,61 @@ import { Reveal } from '../ui/Reveal'
 
 export default function FAQSection() {
   return (
-    <section className="section" style={{ background: 'var(--coal)' }} aria-labelledby="faq-heading">
+    <section
+      className="section border-t border-smoke"
+      style={{ background: 'var(--coal)' }}
+      aria-labelledby="faq-heading"
+    >
       <div className="container">
-        <div className="grid lg:grid-cols-3 gap-16 lg:gap-24">
-          <Reveal delay={0.05}>
-            <p className="eyebrow mb-5">FAQ</p>
-            <h2
-              id="faq-heading"
-              className="font-display text-4xl md:text-5xl text-pure mb-6"
-            >
-              Common{' '}
-              <span className="italic">questions</span>
-            </h2>
-            <p className="font-body text-bone text-base leading-loose">
-              What UK practices ask us before they start. Can't find the answer?{' '}
-              <a href="/contact" className="text-lime hover:underline">
+        {/* Header */}
+        <Reveal delay={0.05}>
+          <div className="flex items-end justify-between pb-10 border-b border-smoke">
+            <div>
+              <p className="eyebrow mb-4">FAQ</p>
+              <h2
+                id="faq-heading"
+                className="font-display text-4xl md:text-5xl text-pure"
+                style={{ letterSpacing: '-0.03em' }}
+              >
+                Common{' '}
+                <span className="italic">questions</span>
+              </h2>
+            </div>
+            <p className="font-body text-sm text-ash leading-relaxed hidden md:block max-w-xs text-right pb-1">
+              Can't find the answer?{' '}
+              <a href="/contact" className="text-lime hover:underline underline-offset-2">
                 Talk to us directly
               </a>
               .
             </p>
-          </Reveal>
+          </div>
+        </Reveal>
 
-          <Reveal className="lg:col-span-2" delay={0.12}>
-            <div role="list">
-              {homeFaqs.map((faq, i) => (
-                <div key={i} role="listitem">
-                  <FAQItem question={faq.q} answer={faq.a} defaultOpen={i === 0} />
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
+        {/* Accordion — full width, numbered */}
+        <Reveal delay={0.1}>
+          <div role="list" className="mt-0">
+            {homeFaqs.map((faq, i) => (
+              <div key={i} role="listitem">
+                <FAQItem
+                  question={faq.q}
+                  answer={faq.a}
+                  defaultOpen={i === 0}
+                  index={i}
+                />
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.2} type="fade">
+          <p className="mt-6 md:hidden font-body text-sm text-ash">
+            Can't find the answer?{' '}
+            <a href="/contact" className="text-lime hover:underline underline-offset-2">
+              Talk to us directly
+            </a>
+            .
+          </p>
+        </Reveal>
       </div>
     </section>
   )

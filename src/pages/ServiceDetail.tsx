@@ -16,9 +16,10 @@ export default function ServiceDetail() {
 
   return (
     <>
-      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
+      {/* Hero */}
+      <section className="pt-40 pb-24 bg-obsidian border-b border-smoke">
         <div className="container">
-          <nav aria-label="Breadcrumb" className="mb-6">
+          <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
               <li><Link to="/" className="hover:text-lime transition-colors">Home</Link></li>
               <li aria-hidden="true">/</li>
@@ -27,57 +28,81 @@ export default function ServiceDetail() {
               <li className="text-bone">{service.title}</li>
             </ol>
           </nav>
-          <p className="eyebrow mb-4">{service.number} — Service</p>
-          <h1 className="font-display text-5xl md:text-6xl text-pure mb-6" style={{ letterSpacing: '-0.03em' }}>
-            {service.title}
-          </h1>
-          <p className="font-body text-bone text-lg max-w-2xl leading-loose">{service.description}</p>
+          <div className="flex items-end justify-between border-b border-smoke pb-8 mb-8">
+            <div>
+              <p className="eyebrow mb-4">{service.number} — Service</p>
+              <h1
+                className="font-display text-5xl md:text-6xl text-pure"
+                style={{ letterSpacing: '-0.03em' }}
+              >
+                {service.title}
+              </h1>
+            </div>
+            <Button to="/contact" size="sm" className="hidden md:flex">
+              Get a quote →
+            </Button>
+          </div>
+          <p className="font-body text-bone text-lg leading-loose max-w-2xl">{service.description}</p>
         </div>
       </section>
 
+      {/* Content — full width document layout */}
       <section className="section bg-obsidian">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-16 lg:gap-24">
-            <div className="lg:col-span-2 space-y-12">
-              {/* What we handle */}
-              <Reveal>
-                <h2 className="font-display text-3xl text-pure mb-8">What we handle</h2>
-                <ul className="grid sm:grid-cols-2 gap-3">
-                  {service.tasks.map(task => (
-                    <li key={task} className="flex items-start gap-2.5">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0 mt-0.5 text-lime" aria-hidden="true">
-                        <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span className="font-body text-sm text-bone leading-relaxed">{task}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
+          <div className="max-w-4xl">
 
-              {/* Platforms */}
-              <Reveal delay={0.05}>
-                <h2 className="font-display text-3xl text-pure mb-6">Software we work in</h2>
+            {/* What we handle */}
+            <Reveal>
+              <div className="pb-12 border-b border-smoke mb-12">
+                <p className="eyebrow mb-6">What we handle</p>
+                <div className="space-y-0">
+                  {service.tasks.map((task, i) => (
+                    <div
+                      key={task}
+                      className="flex items-baseline gap-6 py-4 border-b border-smoke/40 last:border-b-0 border-l-2 border-l-transparent hover:border-l-lime hover:bg-coal pl-4 hover:pl-6 transition-all duration-150 cursor-default"
+                    >
+                      <span className="font-mono text-xs text-ash w-8 flex-shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="font-body text-base text-bone leading-relaxed">{task}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Platforms */}
+            <Reveal delay={0.05}>
+              <div className="pb-12 border-b border-smoke mb-12">
+                <p className="eyebrow mb-6">Software we work in</p>
                 <div className="flex flex-wrap gap-3">
                   {service.platforms.map(p => (
-                    <span key={p} className="font-mono text-xs text-bone border border-smoke px-4 py-2 rounded-sm hover:border-lime/40 transition-colors">
+                    <span
+                      key={p}
+                      className="font-mono text-sm text-bone border-b border-smoke pb-0.5 hover:border-lime hover:text-lime transition-colors cursor-default"
+                    >
                       {p}
                     </span>
                   ))}
                 </div>
-              </Reveal>
+              </div>
+            </Reveal>
 
-              {/* Turnaround */}
-              <Reveal delay={0.1}>
-                <h2 className="font-display text-3xl text-pure mb-4">Turnaround</h2>
-                <div className="bg-coal border border-lime/20 rounded-sm p-5">
-                  <p className="font-body text-sm text-bone leading-relaxed">{service.turnaround}</p>
+            {/* Turnaround */}
+            <Reveal delay={0.08}>
+              <div className="pb-12 border-b border-smoke mb-12">
+                <p className="eyebrow mb-6">Turnaround</p>
+                <div className="border-l-2 border-l-lime pl-6">
+                  <p className="font-body text-base text-bone leading-loose">{service.turnaround}</p>
                 </div>
-              </Reveal>
+              </div>
+            </Reveal>
 
-              {/* Pricing model */}
-              <Reveal delay={0.15}>
-                <h2 className="font-display text-3xl text-pure mb-4">Pricing model</h2>
-                <p className="font-body text-sm text-bone leading-relaxed mb-4">
+            {/* Pricing */}
+            <Reveal delay={0.1}>
+              <div className="pb-12 border-b border-smoke mb-12">
+                <p className="eyebrow mb-6">Pricing model</p>
+                <p className="font-body text-base text-bone leading-loose mb-6">
                   We offer three engagement structures for this service: per-job (you pay for
                   each task individually), monthly retainer (fixed fee for an agreed monthly
                   scope), or full allocation (a dedicated resource block for high-volume needs).
@@ -87,73 +112,64 @@ export default function ServiceDetail() {
                 <Button to="/contact" variant="outline" size="sm">
                   Get a quote →
                 </Button>
-              </Reveal>
+              </div>
+            </Reveal>
 
-              {/* FAQ */}
-              <Reveal delay={0.2}>
-                <h2 className="font-display text-3xl text-pure mb-6">Frequently asked</h2>
+            {/* FAQ */}
+            <Reveal delay={0.12}>
+              <div>
+                <p className="eyebrow mb-6">Frequently asked</p>
                 <div role="list">
                   {service.faqs.map((faq, i) => (
                     <div key={i} role="listitem">
-                      <FAQItem question={faq.q} answer={faq.a} defaultOpen={i === 0} />
+                      <FAQItem question={faq.q} answer={faq.a} defaultOpen={i === 0} index={i} />
                     </div>
                   ))}
                 </div>
-              </Reveal>
-            </div>
+              </div>
+            </Reveal>
+          </div>
 
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-24 space-y-6">
-                <div className="bg-coal border border-lime rounded-sm p-6 shadow-lime">
-                  <h3 className="font-display text-lg text-pure mb-2">Start with one job</h3>
-                  <p className="font-body text-xs text-bone leading-relaxed mb-5">
-                    Trial this service on a single client. Review the output. Decide from there.
-                  </p>
-                  <Button to="/contact" size="sm" className="w-full mb-3">
-                    Book a discovery call
-                  </Button>
-                  <p className="font-mono text-xs text-ash text-center uppercase tracking-label">
-                    No commitment · DPA signed first
-                  </p>
-                </div>
-
-                <div className="bg-coal border border-smoke rounded-sm p-5">
-                  <p className="font-mono text-xs text-ash uppercase tracking-label mb-3">Other services</p>
-                  <ul className="space-y-1">
-                    {services.filter(s => s.id !== service.id).map(s => (
-                      <li key={s.id}>
-                        <Link
-                          to={`/services/${s.id}`}
-                          className="flex items-center gap-2 py-1.5 text-bone hover:text-lime transition-colors group"
-                        >
-                          <span className="font-mono text-xs text-ash group-hover:text-lime transition-colors w-5">{s.number}</span>
-                          <span className="font-body text-sm">{s.title}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          {/* Floating CTA bar */}
+          <Reveal delay={0.15}>
+            <div className="mt-16 pt-10 border-t border-smoke grid md:grid-cols-2 gap-10 items-center">
+              <div>
+                <h3 className="font-display text-2xl text-pure mb-2">Start with one job</h3>
+                <p className="font-body text-sm text-bone leading-relaxed">
+                  Trial this service on a single client. Review the output. Decide from there.
+                  No commitment. DPA signed first.
+                </p>
+              </div>
+              <div className="flex items-center gap-5">
+                <Button to="/contact" size="lg">Book a discovery call</Button>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Prev / Next */}
           <div className="mt-16 pt-8 border-t border-smoke flex items-center justify-between gap-4">
             {prev ? (
-              <Link to={`/services/${prev.id}`} className="group flex items-center gap-2 text-ash hover:text-lime transition-colors">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className="font-body text-sm">{prev.title}</span>
+              <Link
+                to={`/services/${prev.id}`}
+                className="group flex items-center gap-3 text-ash hover:text-lime transition-colors"
+              >
+                <span className="font-mono text-xs" aria-hidden="true">←</span>
+                <div>
+                  <p className="font-mono text-xs text-ash uppercase tracking-label mb-0.5">{prev.number}</p>
+                  <p className="font-body text-sm text-bone group-hover:text-lime transition-colors">{prev.title}</p>
+                </div>
               </Link>
             ) : <span />}
             {next ? (
-              <Link to={`/services/${next.id}`} className="group flex items-center gap-2 text-ash hover:text-lime transition-colors">
-                <span className="font-body text-sm">{next.title}</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+              <Link
+                to={`/services/${next.id}`}
+                className="group flex items-center gap-3 text-ash hover:text-lime transition-colors text-right"
+              >
+                <div>
+                  <p className="font-mono text-xs text-ash uppercase tracking-label mb-0.5">{next.number}</p>
+                  <p className="font-body text-sm text-bone group-hover:text-lime transition-colors">{next.title}</p>
+                </div>
+                <span className="font-mono text-xs" aria-hidden="true">→</span>
               </Link>
             ) : <span />}
           </div>

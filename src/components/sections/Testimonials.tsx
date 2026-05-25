@@ -4,35 +4,60 @@ import { Reveal, Stagger, item } from '../ui/Reveal'
 
 export default function Testimonials() {
   return (
-    <section className="section bg-obsidian" aria-labelledby="testimonials-heading">
+    <section className="section bg-obsidian border-t border-smoke" aria-labelledby="testimonials-heading">
       <div className="container">
-        <Reveal className="max-w-3xl mb-20" delay={0.05}>
-          <p className="eyebrow mb-5">What practices say</p>
-          <h2
-            id="testimonials-heading"
-            className="font-display text-4xl md:text-5xl text-pure"
-          >
-            Trusted by UK{' '}
-            <span className="italic">accounting practices</span>
-          </h2>
+        {/* Header */}
+        <Reveal delay={0.05}>
+          <div className="flex items-end justify-between pb-10 border-b border-smoke">
+            <div>
+              <p className="eyebrow mb-4">What practices say</p>
+              <h2
+                id="testimonials-heading"
+                className="font-display text-4xl md:text-5xl text-pure"
+                style={{ letterSpacing: '-0.03em' }}
+              >
+                Trusted by UK{' '}
+                <span className="italic">accounting practices</span>
+              </h2>
+            </div>
+          </div>
         </Reveal>
 
-        <Stagger className="grid md:grid-cols-3 gap-8" stagger={0.12}>
+        {/* Stacked large blockquotes */}
+        <Stagger stagger={0.1}>
           {testimonials.map((t, i) => (
             <motion.blockquote
               key={i}
               variants={item}
-              className="bg-coal border border-smoke rounded-sm p-8 flex flex-col gap-6 hover:border-lime/40 hover:-translate-y-1 hover:shadow-lime transition-all duration-300 cursor-default"
+              className="grid md:grid-cols-12 gap-6 lg:gap-10 py-12 border-b border-smoke group cursor-default hover:bg-coal transition-colors duration-200"
             >
-              <span className="font-display text-7xl text-lime leading-none select-none" aria-hidden="true">"</span>
-              <p className="font-display text-lg text-bone italic leading-relaxed flex-1">{t.quote}</p>
-              <footer className="border-t border-smoke pt-4 mt-auto">
-                <cite className="not-italic">
-                  <p className="font-body text-sm text-pure font-medium">{t.name}</p>
+              {/* Quote mark */}
+              <div className="md:col-span-1 hidden md:flex items-start justify-end pt-1">
+                <span
+                  className="font-display text-5xl text-lime/20 leading-none group-hover:text-lime/40 transition-colors duration-300 select-none"
+                  aria-hidden="true"
+                >
+                  "
+                </span>
+              </div>
+
+              {/* Quote text */}
+              <div className="md:col-span-8">
+                <p className="font-display text-xl md:text-2xl text-pure italic leading-snug mb-6">
+                  {t.quote}
+                </p>
+                <footer>
+                  <p className="font-body text-sm text-bone font-medium">{t.name}</p>
                   <p className="font-body text-xs text-ash mt-0.5">{t.business}</p>
-                  <p className="font-mono text-xs text-lime mt-1 uppercase tracking-label">{t.service}</p>
-                </cite>
-              </footer>
+                </footer>
+              </div>
+
+              {/* Service tag — right aligned */}
+              <div className="md:col-span-3 md:flex md:items-start md:justify-end">
+                <span className="font-mono text-xs text-lime uppercase tracking-label">
+                  {t.service}
+                </span>
+              </div>
             </motion.blockquote>
           ))}
         </Stagger>
