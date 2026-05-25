@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function Terms() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-obsidian border-b border-smoke">
+      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
         <div className="container">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
@@ -13,7 +13,7 @@ export default function Terms() {
             </ol>
           </nav>
           <p className="eyebrow mb-4">Legal</p>
-          <h1 className="font-display text-4xl md:text-5xl text-pure mb-4">
+          <h1 className="font-display text-5xl md:text-6xl text-pure mb-5">
             Terms of Service
           </h1>
           <p className="font-body text-bone text-sm">

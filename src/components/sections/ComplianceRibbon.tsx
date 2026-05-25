@@ -46,12 +46,12 @@ const badges = [
 export default function ComplianceRibbon() {
   return (
     <section
-      className="py-12 md:py-16"
+      className="py-16 md:py-24"
       style={{ background: 'var(--coal)' }}
       aria-labelledby="compliance-heading"
     >
       <div className="container">
-        <div className="flex flex-col md:flex-row md:items-start gap-10 md:gap-16">
+        <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-24">
           <Reveal className="md:w-40 flex-shrink-0" delay={0.05}>
             <p id="compliance-heading" className="eyebrow">
               Compliance
@@ -65,14 +65,14 @@ export default function ComplianceRibbon() {
               <motion.div
                 key={badge.title}
                 variants={item}
-                className="flex flex-col gap-3 px-6 first:pl-0 last:pr-0 py-2 group"
+                className="flex flex-col gap-4 px-8 first:pl-0 last:pr-0 py-2 group"
               >
                 <span className="text-pure opacity-50 group-hover:opacity-100 transition-opacity duration-300">
                   {badge.icon}
                 </span>
                 <div>
-                  <p className="font-display text-sm text-pure font-medium">{badge.title}</p>
-                  <p className="font-body text-xs text-ash mt-1 leading-relaxed">{badge.subtitle}</p>
+                  <p className="font-display text-base text-pure font-medium">{badge.title}</p>
+                  <p className="font-body text-sm text-ash mt-1.5 leading-relaxed">{badge.subtitle}</p>
                 </div>
               </motion.div>
             ))}

@@ -21,8 +21,8 @@ export default function ClosingCTA() {
         <Reveal delay={0.12}>
           <h2
             id="closing-cta-heading"
-            className="font-display text-4xl md:text-5xl lg:text-6xl text-pure mb-6 max-w-3xl mx-auto"
-            style={{ letterSpacing: '-0.02em' }}
+            className="font-display text-5xl md:text-6xl lg:text-7xl text-pure mb-8 max-w-3xl mx-auto"
+            style={{ letterSpacing: '-0.03em' }}
           >
             One trial job.{' '}
             <span className="italic">That's the whole ask.</span>
@@ -30,14 +30,14 @@ export default function ClosingCTA() {
         </Reveal>
 
         <Reveal delay={0.22}>
-          <p className="font-body text-bone text-base leading-relaxed mb-10 max-w-lg mx-auto">
+          <p className="font-body text-bone text-lg leading-loose mb-12 max-w-xl mx-auto">
             Give us one job from one client. Review the output against your own standards.
             Decide from there. No contract, no commitment until you are satisfied.
           </p>
         </Reveal>
 
         <Reveal delay={0.3}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-10">
             <Button to="/contact" size="lg">Book a 20-minute call</Button>
             <Button to="/how-we-work" variant="ghost" size="lg">See how we work</Button>
           </div>

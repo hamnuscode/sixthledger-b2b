@@ -6,26 +6,26 @@ export default function Testimonials() {
   return (
     <section className="section bg-obsidian" aria-labelledby="testimonials-heading">
       <div className="container">
-        <Reveal className="max-w-2xl mb-12" delay={0.05}>
-          <p className="eyebrow mb-4">What practices say</p>
+        <Reveal className="max-w-3xl mb-20" delay={0.05}>
+          <p className="eyebrow mb-5">What practices say</p>
           <h2
             id="testimonials-heading"
-            className="font-display text-3xl md:text-4xl text-pure"
+            className="font-display text-4xl md:text-5xl text-pure"
           >
             Trusted by UK{' '}
             <span className="italic">accounting practices</span>
           </h2>
         </Reveal>
 
-        <Stagger className="grid md:grid-cols-3 gap-6" stagger={0.12}>
+        <Stagger className="grid md:grid-cols-3 gap-8" stagger={0.12}>
           {testimonials.map((t, i) => (
             <motion.blockquote
               key={i}
               variants={item}
-              className="bg-coal border border-smoke rounded-sm p-6 flex flex-col gap-5 hover:border-lime/40 hover:-translate-y-1 hover:shadow-lime transition-all duration-300 cursor-default"
+              className="bg-coal border border-smoke rounded-sm p-8 flex flex-col gap-6 hover:border-lime/40 hover:-translate-y-1 hover:shadow-lime transition-all duration-300 cursor-default"
             >
-              <span className="font-display text-5xl text-lime leading-none select-none" aria-hidden="true">"</span>
-              <p className="font-display text-base text-bone italic leading-relaxed flex-1">{t.quote}</p>
+              <span className="font-display text-7xl text-lime leading-none select-none" aria-hidden="true">"</span>
+              <p className="font-display text-lg text-bone italic leading-relaxed flex-1">{t.quote}</p>
               <footer className="border-t border-smoke pt-4 mt-auto">
                 <cite className="not-italic">
                   <p className="font-body text-sm text-pure font-medium">{t.name}</p>

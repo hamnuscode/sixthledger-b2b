@@ -50,7 +50,7 @@ export default function Header() {
       role="banner"
     >
       <div className="container">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-24">
           <Link
             to="/"
             className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime"
@@ -59,13 +59,13 @@ export default function Header() {
             <img
               src="/logo-black.png"
               alt="Sixth Ledger"
-              className="h-7 md:h-8 w-auto"
+              className="h-7 md:h-9 w-auto"
               style={{ filter: 'brightness(0) invert(1)' }}
             />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-7" role="navigation" aria-label="Main navigation">
+          <nav className="hidden md:flex items-center gap-9" role="navigation" aria-label="Main navigation">
             <div className="relative" ref={servicesRef}>
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}

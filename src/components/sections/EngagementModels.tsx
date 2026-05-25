@@ -52,22 +52,22 @@ export default function EngagementModels() {
   return (
     <section className="section bg-obsidian" aria-labelledby="engagement-heading" id="engagement">
       <div className="container">
-        <Reveal className="max-w-2xl mb-12" delay={0.05}>
-          <p className="eyebrow mb-4">How we engage</p>
+        <Reveal className="max-w-3xl mb-20" delay={0.05}>
+          <p className="eyebrow mb-5">How we engage</p>
           <h2
             id="engagement-heading"
-            className="font-display text-3xl md:text-4xl text-pure mb-4"
+            className="font-display text-4xl md:text-5xl text-pure mb-5"
           >
             Three ways to{' '}
             <span className="italic">work with us.</span>
           </h2>
-          <p className="font-body text-bone text-sm leading-relaxed">
+          <p className="font-body text-bone text-base leading-loose">
             We don't publish rate cards — every practice is different. What we do publish is how
             the engagement models work, so you know what to expect before the call.
           </p>
         </Reveal>
 
-        <Stagger className="grid md:grid-cols-3 gap-6" stagger={0.1}>
+        <Stagger className="grid md:grid-cols-3 gap-8" stagger={0.1}>
           {models.map(model => (
             <motion.div
               key={model.name}
@@ -90,12 +90,12 @@ export default function EngagementModels() {
                 </div>
               )}
 
-              <div className="p-6 flex-1 flex flex-col gap-5">
+              <div className="p-8 flex-1 flex flex-col gap-6">
                 <div>
                   <p className="eyebrow text-ash mb-2">{model.eyebrow}</p>
-                  <h3 className="font-display text-xl text-pure">{model.name}</h3>
-                  <p className="font-body text-xs text-lime font-medium mt-1">{model.tagline}</p>
-                  <p className="font-body text-xs text-bone leading-relaxed mt-2">{model.description}</p>
+                  <h3 className="font-display text-2xl text-pure">{model.name}</h3>
+                  <p className="font-body text-sm text-lime font-medium mt-1.5">{model.tagline}</p>
+                  <p className="font-body text-sm text-bone leading-relaxed mt-3">{model.description}</p>
                 </div>
 
                 <ul className="space-y-2.5 flex-1">
@@ -104,7 +104,7 @@ export default function EngagementModels() {
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0 mt-0.5 text-lime" aria-hidden="true">
                         <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      <span className="font-body text-xs text-bone leading-relaxed">{feature}</span>
+                      <span className="font-body text-sm text-bone leading-relaxed">{feature}</span>
                     </li>
                   ))}
                 </ul>

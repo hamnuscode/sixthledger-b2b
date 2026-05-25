@@ -49,7 +49,7 @@ const complianceItems = [
 export default function Compliance() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-obsidian border-b border-smoke">
+      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
         <div className="container">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
@@ -59,11 +59,11 @@ export default function Compliance() {
             </ol>
           </nav>
           <p className="eyebrow mb-4">Compliance</p>
-          <h1 className="font-display text-4xl md:text-5xl text-pure mb-4 max-w-2xl" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="font-display text-5xl md:text-6xl text-pure mb-6 max-w-3xl" style={{ letterSpacing: '-0.03em' }}>
             Everything your due diligence{' '}
             <span className="italic">requires.</span>
           </h1>
-          <p className="font-body text-bone text-base max-w-xl leading-relaxed">
+          <p className="font-body text-bone text-lg max-w-2xl leading-loose">
             UK accounting practices have an obligation to verify the compliance posture of any
             partner who handles client data. Here is ours, in full. Every document listed below
             is available on request within one business day.

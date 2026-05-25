@@ -33,11 +33,11 @@ export default function HowItWorks() {
       id="how-we-work"
     >
       <div className="container">
-        <Reveal className="max-w-2xl mb-12" delay={0.05}>
-          <p className="eyebrow mb-4">How we onboard</p>
+        <Reveal className="max-w-3xl mb-20" delay={0.05}>
+          <p className="eyebrow mb-5">How we onboard</p>
           <h2
             id="process-heading"
-            className="font-display text-3xl md:text-4xl text-pure"
+            className="font-display text-4xl md:text-5xl text-pure"
           >
             From first contact to{' '}
             <span className="italic">first delivery</span>
@@ -46,12 +46,12 @@ export default function HowItWorks() {
           </h2>
         </Reveal>
 
-        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" stagger={0.12}>
+        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10" stagger={0.12}>
           {steps.map((step, i) => (
             <motion.div
               key={step.numeral}
               variants={item}
-              className="relative flex flex-col gap-4 group"
+              className="relative flex flex-col gap-6 group"
             >
               {i < steps.length - 1 && (
                 <div
@@ -74,7 +74,7 @@ export default function HowItWorks() {
                   {step.title}
                 </h3>
               </div>
-              <p className="font-body text-sm text-bone leading-relaxed">{step.body}</p>
+              <p className="font-body text-base text-bone leading-loose">{step.body}</p>
             </motion.div>
           ))}
         </Stagger>

@@ -6,17 +6,17 @@ export default function FAQSection() {
   return (
     <section className="section" style={{ background: 'var(--coal)' }} aria-labelledby="faq-heading">
       <div className="container">
-        <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-3 gap-16 lg:gap-24">
           <Reveal delay={0.05}>
-            <p className="eyebrow mb-4">FAQ</p>
+            <p className="eyebrow mb-5">FAQ</p>
             <h2
               id="faq-heading"
-              className="font-display text-3xl md:text-4xl text-pure mb-5"
+              className="font-display text-4xl md:text-5xl text-pure mb-6"
             >
               Common{' '}
               <span className="italic">questions</span>
             </h2>
-            <p className="font-body text-bone text-sm leading-relaxed">
+            <p className="font-body text-bone text-base leading-loose">
               What UK practices ask us before they start. Can't find the answer?{' '}
               <a href="/contact" className="text-lime hover:underline">
                 Talk to us directly

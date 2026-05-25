@@ -4,8 +4,8 @@ import { services } from '../../data/services'
 export default function Footer() {
   return (
     <footer className="bg-coal border-t border-smoke" role="contentinfo">
-      <div className="container py-14">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+      <div className="container py-20">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" aria-label="Sixth Ledger — Home">

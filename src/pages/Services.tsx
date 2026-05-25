@@ -8,7 +8,7 @@ import ClosingCTA from '../components/sections/ClosingCTA'
 export default function Services() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-obsidian border-b border-smoke">
+      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
         <div className="container">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
@@ -18,11 +18,11 @@ export default function Services() {
             </ol>
           </nav>
           <p className="eyebrow mb-4">What we handle</p>
-          <h1 className="font-display text-4xl md:text-5xl text-pure mb-4 max-w-2xl" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="font-display text-5xl md:text-6xl text-pure mb-6 max-w-3xl" style={{ letterSpacing: '-0.03em' }}>
             Nine service lines.{' '}
             <span className="italic">One team. One DPA.</span>
           </h1>
-          <p className="font-body text-bone text-base max-w-xl leading-relaxed">
+          <p className="font-body text-bone text-lg max-w-2xl leading-loose">
             Every service delivered white-label, reviewed by ACCA-qualified professionals,
             and returned to you ready for client delivery. You stay client-facing. We do the work.
           </p>
@@ -31,12 +31,12 @@ export default function Services() {
 
       <section className="section bg-obsidian" aria-label="All services">
         <div className="container">
-          <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" stagger={0.07}>
+          <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" stagger={0.07}>
             {services.map(service => (
               <motion.div key={service.id} variants={item}>
                 <Link
                   to={`/services/${service.id}`}
-                  className="group block bg-coal border border-smoke rounded-sm p-6 hover:border-lime hover:-translate-y-1 hover:shadow-lime transition-all duration-200 focus-visible:outline-none focus-visible:border-lime h-full"
+                  className="group block bg-coal border border-smoke rounded-sm p-8 hover:border-lime hover:-translate-y-1 hover:shadow-lime transition-all duration-200 focus-visible:outline-none focus-visible:border-lime h-full"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="font-mono text-xs text-lime tracking-label">{service.number}</span>
@@ -44,8 +44,8 @@ export default function Services() {
                       <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
-                  <h2 className="font-display text-xl text-pure mb-2 group-hover:text-lime transition-colors">{service.title}</h2>
-                  <p className="font-body text-sm text-bone leading-relaxed mb-4">{service.shortDescription}</p>
+                  <h2 className="font-display text-2xl text-pure mb-3 group-hover:text-lime transition-colors">{service.title}</h2>
+                  <p className="font-body text-base text-bone leading-relaxed mb-5">{service.shortDescription}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {service.platforms.slice(0, 3).map(p => (
                       <span key={p} className="font-mono text-xs text-ash border border-smoke px-2 py-0.5 rounded-sm">{p}</span>

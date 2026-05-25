@@ -19,7 +19,7 @@ const platforms = ['Xero', 'QuickBooks', 'Sage', 'FreeAgent', 'TaxCalc', 'Iris',
 export default function About() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-obsidian border-b border-smoke">
+      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
         <div className="container">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
@@ -29,11 +29,11 @@ export default function About() {
             </ol>
           </nav>
           <p className="eyebrow mb-4">About Sixth Ledger</p>
-          <h1 className="font-display text-4xl md:text-5xl text-pure mb-4 max-w-2xl" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="font-display text-5xl md:text-6xl text-pure mb-6 max-w-3xl" style={{ letterSpacing: '-0.03em' }}>
             An outsourcing partner built for{' '}
             <span className="italic">UK accounting practices.</span>
           </h1>
-          <p className="font-body text-bone text-base max-w-xl leading-relaxed">
+          <p className="font-body text-bone text-lg max-w-2xl leading-loose">
             ACCA-led. ICO-registered. UK working hours. Built specifically to extend the
             capacity of UK accounting practices without adding to their headcount.
           </p>
@@ -43,30 +43,30 @@ export default function About() {
       {/* Brand story */}
       <section className="section bg-obsidian" aria-labelledby="story-heading">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-3 gap-16 lg:gap-24">
             <Reveal className="lg:col-span-2 space-y-5" delay={0.05}>
-              <h2 id="story-heading" className="font-display text-3xl text-pure mb-6">
+              <h2 id="story-heading" className="font-display text-4xl md:text-5xl text-pure mb-8">
                 Why we exist
               </h2>
-              <p className="font-body text-bone text-sm leading-relaxed">
+              <p className="font-body text-bone text-base leading-loose">
                 Sixth Ledger exists because UK accounting practices face a structural problem:
                 demand peaks in predictable cycles — January self-assessment season, year-end,
                 payroll year-end — but hiring is slow, expensive, and binds you to fixed costs
                 you don't need outside those windows.
               </p>
-              <p className="font-body text-bone text-sm leading-relaxed">
+              <p className="font-body text-bone text-base leading-loose">
                 We built Sixth Ledger as the answer: a team of ACCA-qualified and
                 ACCA-finalist accountants, operating on UK working hours, delivering work
                 white-label under your practice credentials. Your clients don't know we exist.
                 Your partners don't deal with recruitment. Your overhead stays flat.
               </p>
-              <p className="font-body text-bone text-sm leading-relaxed">
+              <p className="font-body text-bone text-base leading-loose">
                 Every engagement starts with a signed Data Processing Agreement and ICO-registered
                 data handling. Compliance is not an add-on. It is the foundation that makes the
                 whole arrangement possible — because UK firms have to be able to show their clients
                 that their data is handled correctly, regardless of where the work is done.
               </p>
-              <p className="font-body text-bone text-sm leading-relaxed">
+              <p className="font-body text-bone text-base leading-loose">
                 We are headquartered in Islamabad, Pakistan. We are fully transparent about this.
                 We have the IDTA-ready transfer mechanisms, the signed DPAs, and the professional
                 qualifications that make cross-border accounting work possible, auditable, and safe.

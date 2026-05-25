@@ -28,11 +28,11 @@ export default function WhyChooseUs() {
   return (
     <section className="section bg-obsidian" aria-labelledby="why-heading">
       <div className="container">
-        <Reveal className="max-w-2xl mb-12" delay={0.05}>
-          <p className="eyebrow mb-4">Why Sixth Ledger</p>
+        <Reveal className="max-w-3xl mb-20" delay={0.05}>
+          <p className="eyebrow mb-5">Why Sixth Ledger</p>
           <h2
             id="why-heading"
-            className="font-display text-3xl md:text-4xl text-pure"
+            className="font-display text-4xl md:text-5xl text-pure"
           >
             What makes us{' '}
             <span className="italic">different</span>
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
             <motion.div
               key={reason.numeral}
               variants={item}
-              className={`p-7 flex flex-col gap-4 group transition-colors duration-200 hover:bg-coal ${
+              className={`p-10 flex flex-col gap-6 group transition-colors duration-200 hover:bg-coal ${
                 i < reasons.length - 1 ? 'border-r border-smoke' : ''
               } border-b sm:border-b-0`}
             >
@@ -54,11 +54,11 @@ export default function WhyChooseUs() {
                   aria-hidden="true"
                 />
               </div>
-              <span className="font-display text-xl text-ash italic group-hover:text-lime transition-colors duration-200" aria-hidden="true">
+              <span className="font-display text-2xl text-ash italic group-hover:text-lime transition-colors duration-200" aria-hidden="true">
                 {reason.numeral}
               </span>
-              <h3 className="font-display text-lg text-pure leading-snug">{reason.title}</h3>
-              <p className="font-body text-sm text-bone leading-relaxed">{reason.body}</p>
+              <h3 className="font-display text-xl text-pure leading-snug">{reason.title}</h3>
+              <p className="font-body text-base text-bone leading-loose">{reason.body}</p>
             </motion.div>
           ))}
         </Stagger>

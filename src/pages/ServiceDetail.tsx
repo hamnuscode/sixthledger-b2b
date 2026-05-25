@@ -16,7 +16,7 @@ export default function ServiceDetail() {
 
   return (
     <>
-      <section className="pt-32 pb-16 bg-obsidian border-b border-smoke">
+      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
         <div className="container">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
@@ -28,20 +28,20 @@ export default function ServiceDetail() {
             </ol>
           </nav>
           <p className="eyebrow mb-4">{service.number} — Service</p>
-          <h1 className="font-display text-4xl md:text-5xl text-pure mb-4" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="font-display text-5xl md:text-6xl text-pure mb-6" style={{ letterSpacing: '-0.03em' }}>
             {service.title}
           </h1>
-          <p className="font-body text-bone text-base max-w-2xl leading-relaxed">{service.description}</p>
+          <p className="font-body text-bone text-lg max-w-2xl leading-loose">{service.description}</p>
         </div>
       </section>
 
       <section className="section bg-obsidian">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-3 gap-16 lg:gap-24">
             <div className="lg:col-span-2 space-y-12">
               {/* What we handle */}
               <Reveal>
-                <h2 className="font-display text-2xl text-pure mb-6">What we handle</h2>
+                <h2 className="font-display text-3xl text-pure mb-8">What we handle</h2>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {service.tasks.map(task => (
                     <li key={task} className="flex items-start gap-2.5">
@@ -56,7 +56,7 @@ export default function ServiceDetail() {
 
               {/* Platforms */}
               <Reveal delay={0.05}>
-                <h2 className="font-display text-2xl text-pure mb-5">Software we work in</h2>
+                <h2 className="font-display text-3xl text-pure mb-6">Software we work in</h2>
                 <div className="flex flex-wrap gap-3">
                   {service.platforms.map(p => (
                     <span key={p} className="font-mono text-xs text-bone border border-smoke px-4 py-2 rounded-sm hover:border-lime/40 transition-colors">
@@ -68,7 +68,7 @@ export default function ServiceDetail() {
 
               {/* Turnaround */}
               <Reveal delay={0.1}>
-                <h2 className="font-display text-2xl text-pure mb-3">Turnaround</h2>
+                <h2 className="font-display text-3xl text-pure mb-4">Turnaround</h2>
                 <div className="bg-coal border border-lime/20 rounded-sm p-5">
                   <p className="font-body text-sm text-bone leading-relaxed">{service.turnaround}</p>
                 </div>
@@ -76,7 +76,7 @@ export default function ServiceDetail() {
 
               {/* Pricing model */}
               <Reveal delay={0.15}>
-                <h2 className="font-display text-2xl text-pure mb-3">Pricing model</h2>
+                <h2 className="font-display text-3xl text-pure mb-4">Pricing model</h2>
                 <p className="font-body text-sm text-bone leading-relaxed mb-4">
                   We offer three engagement structures for this service: per-job (you pay for
                   each task individually), monthly retainer (fixed fee for an agreed monthly
@@ -91,7 +91,7 @@ export default function ServiceDetail() {
 
               {/* FAQ */}
               <Reveal delay={0.2}>
-                <h2 className="font-display text-2xl text-pure mb-5">Frequently asked</h2>
+                <h2 className="font-display text-3xl text-pure mb-6">Frequently asked</h2>
                 <div role="list">
                   {service.faqs.map((faq, i) => (
                     <div key={i} role="listitem">

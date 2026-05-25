@@ -8,18 +8,18 @@ export default function ServicesGrid() {
   return (
     <section className="section bg-obsidian" aria-labelledby="services-heading">
       <div className="container">
-        <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-3 gap-16 lg:gap-24">
           <div className="lg:col-span-1">
             <Reveal delay={0.05}>
-              <p className="eyebrow mb-4">What we handle</p>
+              <p className="eyebrow mb-5">What we handle</p>
               <h2
                 id="services-heading"
-                className="font-display text-3xl md:text-4xl text-pure mb-5"
+                className="font-display text-4xl md:text-5xl text-pure mb-6"
               >
                 Nine service lines.{' '}
                 <span className="italic">One team.</span>
               </h2>
-              <p className="text-bone text-sm leading-relaxed mb-6">
+              <p className="text-bone text-base leading-loose mb-8">
                 From monthly bookkeeping to self-assessment season, payroll to year-end — we
                 cover every routine service your practice delivers, delivered back to you
                 white-label, ready to review and file.
@@ -36,16 +36,16 @@ export default function ServicesGrid() {
                 <motion.div key={service.id} variants={item}>
                   <Link
                     to={`/services/${service.id}`}
-                    className="group bg-obsidian p-5 flex flex-col gap-2 border border-transparent hover:border-lime transition-all duration-200 focus-visible:outline-none focus-visible:border-lime h-full hover:-translate-y-0.5 hover:shadow-lime-sm"
+                    className="group bg-obsidian p-7 flex flex-col gap-3 border border-transparent hover:border-lime transition-all duration-200 focus-visible:outline-none focus-visible:border-lime h-full hover:-translate-y-0.5 hover:shadow-lime-sm"
                     style={{ display: 'flex' }}
                   >
                     <span className="font-mono text-xs text-lime tracking-label">
                       {service.number}
                     </span>
-                    <h3 className="font-display text-base text-pure font-medium group-hover:text-lime transition-colors">
+                    <h3 className="font-display text-lg text-pure font-medium group-hover:text-lime transition-colors">
                       {service.title}
                     </h3>
-                    <p className="font-body text-xs text-ash leading-relaxed">
+                    <p className="font-body text-sm text-ash leading-relaxed">
                       {service.shortDescription}
                     </p>
                     <span className="mt-auto text-lime text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 pt-2">

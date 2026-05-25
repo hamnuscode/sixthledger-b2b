@@ -39,7 +39,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="pt-32 pb-16 bg-obsidian border-b border-smoke">
+      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
         <div className="container">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
@@ -49,11 +49,11 @@ export default function Contact() {
             </ol>
           </nav>
           <p className="eyebrow mb-4">Get in touch</p>
-          <h1 className="font-display text-4xl md:text-5xl text-pure mb-4">
+          <h1 className="font-display text-5xl md:text-6xl text-pure mb-6">
             Book a{' '}
             <span className="italic">20-minute call</span>
           </h1>
-          <p className="font-body text-bone text-base max-w-xl leading-relaxed">
+          <p className="font-body text-bone text-lg max-w-2xl leading-loose">
             We review your practice's needs, confirm what we can deliver, and give you a
             fee indication before you commit to anything. 20 minutes. No obligation.
           </p>
@@ -62,12 +62,12 @@ export default function Contact() {
 
       <section className="section bg-obsidian">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-3 gap-16 lg:gap-24">
             <div className="lg:col-span-2 space-y-12">
               {/* Cal.com placeholder */}
               <div>
-                <h2 className="font-display text-2xl text-pure mb-2">Book a slot directly</h2>
-                <p className="font-body text-sm text-ash mb-6">Select a time that works for you. The call is 20 minutes.</p>
+                <h2 className="font-display text-3xl text-pure mb-3">Book a slot directly</h2>
+                <p className="font-body text-base text-ash mb-8">Select a time that works for you. The call is 20 minutes.</p>
                 <div
                   className="rounded-sm border border-smoke bg-coal flex flex-col items-center justify-center py-16 gap-4"
                   role="region"
@@ -90,8 +90,8 @@ export default function Contact() {
 
               {/* Contact form */}
               <div className="border-t border-smoke pt-12">
-                <h2 className="font-display text-2xl text-pure mb-2">Or send an enquiry</h2>
-                <p className="font-body text-sm text-ash mb-8">We respond to all enquiries within one business day.</p>
+                <h2 className="font-display text-3xl text-pure mb-3">Or send an enquiry</h2>
+                <p className="font-body text-base text-ash mb-10">We respond to all enquiries within one business day.</p>
 
                 {submitted ? (
                   <div className="bg-coal border border-lime rounded-sm p-8 text-center shadow-lime">
@@ -106,7 +106,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} noValidate aria-label="Contact form">
                     <input type="text" name="_honeypot" tabIndex={-1} aria-hidden="true" className="absolute opacity-0 pointer-events-none" />
 
-                    <div className="grid sm:grid-cols-2 gap-5">
+                    <div className="grid sm:grid-cols-2 gap-6">
                       <FormField id="name" label="Your name" type="text" required placeholder="James Hartley" autoComplete="name" />
                       <FormField id="firm" label="Firm name" type="text" required placeholder="Hartley Moore Accountants" />
                       <FormField id="email" label="Email address" type="email" required placeholder="james@hartleymoore.co.uk" autoComplete="email" />

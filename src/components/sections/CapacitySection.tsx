@@ -26,16 +26,16 @@ export default function CapacitySection() {
       aria-labelledby="capacity-heading"
     >
       <div className="container">
-        <Reveal className="max-w-2xl mb-12" delay={0.05}>
-          <p className="eyebrow mb-4">The problem we solve</p>
+        <Reveal className="max-w-3xl mb-20" delay={0.05}>
+          <p className="eyebrow mb-5">The problem we solve</p>
           <h2
             id="capacity-heading"
-            className="font-display text-3xl md:text-4xl text-pure mb-5"
+            className="font-display text-4xl md:text-5xl text-pure mb-6"
           >
             Every UK practice hits the same{' '}
             <span className="italic">capacity wall.</span>
           </h2>
-          <p className="font-body text-bone text-sm leading-relaxed">
+          <p className="font-body text-bone text-base leading-loose">
             The answer isn't another job board post. It's an extension of your team that's already
             trained, already compliant, and already working UK hours.
           </p>
@@ -46,7 +46,7 @@ export default function CapacitySection() {
             <motion.div
               key={point.number}
               variants={item}
-              className="bg-obsidian p-8 flex flex-col gap-5 group hover:bg-coal transition-colors duration-200"
+              className="bg-obsidian p-10 lg:p-14 flex flex-col gap-6 group hover:bg-coal transition-colors duration-200"
             >
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs text-lime tracking-label">{point.number}</span>
@@ -54,14 +54,14 @@ export default function CapacitySection() {
                   <div className="absolute left-0 top-0 h-px w-0 bg-lime group-hover:w-full transition-all duration-500" aria-hidden="true" />
                 </div>
               </div>
-              <h3 className="font-display text-lg text-pure">{point.title}</h3>
-              <p className="font-body text-sm text-bone leading-relaxed">{point.body}</p>
+              <h3 className="font-display text-xl text-pure">{point.title}</h3>
+              <p className="font-body text-base text-bone leading-loose">{point.body}</p>
             </motion.div>
           ))}
         </Stagger>
 
         <Reveal delay={0.3} type="fade">
-          <div className="mt-10 p-6 border border-lime/30 rounded-sm bg-coal flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+          <div className="mt-14 p-8 lg:p-10 border border-lime/30 rounded-sm bg-coal flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
               <p className="font-body text-sm text-pure font-medium mb-1">
                 There is a better model.

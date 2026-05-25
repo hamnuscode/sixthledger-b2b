@@ -32,22 +32,22 @@ export default function StatBand() {
   const inView = useInView(ref, { once: true, margin: '-40px 0px' })
 
   return (
-    <section ref={ref} className="bg-coal border-y border-smoke py-10" aria-label="Key figures">
+    <section ref={ref} className="bg-coal border-y border-smoke py-16" aria-label="Key figures">
       <div className="container">
         <Stagger className="grid grid-cols-2 md:grid-cols-4" stagger={0.1}>
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
               variants={item}
-              className={`flex flex-col items-center justify-center py-4 px-4 text-center ${
+              className={`flex flex-col items-center justify-center py-8 px-8 text-center ${
                 i < stats.length - 1 ? 'md:border-r border-smoke' : ''
               } ${i === 1 ? 'border-r border-smoke md:border-r' : ''}`}
             >
-              <span className="font-display text-4xl md:text-5xl text-pure" style={{ letterSpacing: '-0.02em' }}>
+              <span className="font-display text-5xl md:text-7xl text-pure" style={{ letterSpacing: '-0.03em' }}>
                 {stat.numeric ? <CountUp target={parseInt(stat.value)} active={inView} /> : stat.value}
               </span>
               <span
-                className="font-mono text-xs text-ash uppercase tracking-label mt-2 text-center leading-relaxed"
+                className="font-mono text-xs text-ash uppercase tracking-label mt-4 text-center leading-relaxed"
                 style={{ whiteSpace: 'pre-line' }}
               >
                 {stat.label}

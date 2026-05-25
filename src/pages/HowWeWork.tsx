@@ -58,7 +58,7 @@ const principles = [
 export default function HowWeWork() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-obsidian border-b border-smoke">
+      <section className="pt-40 pb-28 bg-obsidian border-b border-smoke">
         <div className="container">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 font-mono text-xs text-ash uppercase tracking-label">
@@ -68,12 +68,12 @@ export default function HowWeWork() {
             </ol>
           </nav>
           <p className="eyebrow mb-4">Process</p>
-          <h1 className="font-display text-4xl md:text-5xl text-pure mb-4 max-w-2xl" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="font-display text-5xl md:text-6xl text-pure mb-6 max-w-3xl" style={{ letterSpacing: '-0.03em' }}>
             From first call to{' '}
             <span className="italic">first delivery</span>
             {' '}in a week.
           </h1>
-          <p className="font-body text-bone text-base max-w-xl leading-relaxed">
+          <p className="font-body text-bone text-lg max-w-2xl leading-loose">
             Here is exactly how we engage, what the paperwork looks like, how the trial job
             works, and how ongoing capacity is managed. No ambiguity.
           </p>
@@ -117,7 +117,7 @@ export default function HowWeWork() {
         <div className="container">
           <Reveal className="max-w-2xl mb-12" delay={0.05}>
             <p className="eyebrow mb-4">How we operate</p>
-            <h2 id="principles-heading" className="font-display text-3xl md:text-4xl text-pure">
+            <h2 id="principles-heading" className="font-display text-4xl md:text-5xl text-pure">
               Four principles that{' '}
               <span className="italic">don't move.</span>
             </h2>

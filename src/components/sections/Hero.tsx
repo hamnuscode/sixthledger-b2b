@@ -7,7 +7,7 @@ const EASE = [0.16, 1, 0.3, 1]
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-24 pb-28 overflow-hidden"
       style={{ background: 'var(--obsidian)' }}
       aria-labelledby="hero-headline"
     >
@@ -32,11 +32,11 @@ export default function Hero() {
       />
 
       <div className="container relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
           {/* Left: copy */}
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <motion.p
-              className="eyebrow mb-5"
+              className="eyebrow mb-6"
               aria-hidden="true"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function Hero() {
 
             <motion.h1
               id="hero-headline"
-              className="font-display text-5xl sm:text-6xl lg:text-7xl leading-tight text-pure mb-6"
+              className="font-display text-5xl sm:text-6xl lg:text-[5.5rem] leading-none text-pure mb-8"
               style={{ letterSpacing: '-0.02em' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="font-body text-bone text-lg leading-relaxed mb-8 max-w-lg"
+              className="font-body text-bone text-xl leading-loose mb-10 max-w-xl"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, ease: EASE, delay: 0.28 }}
@@ -68,7 +68,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-3 mb-8"
+              className="flex flex-col sm:flex-row gap-4 mb-10"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.4 }}
