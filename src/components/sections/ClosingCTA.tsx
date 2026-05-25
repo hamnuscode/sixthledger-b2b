@@ -28,11 +28,10 @@ export default function ClosingCTA() {
         <Reveal delay={0.1}>
           <h2
             id="closing-cta-heading"
-            className="font-display text-pure mb-0"
+            className="font-display text-4xl md:text-5xl lg:text-6xl text-pure mb-0"
             style={{
-              fontSize: 'clamp(3rem, 8vw, 7rem)',
-              letterSpacing: '-0.04em',
-              lineHeight: '0.92',
+              letterSpacing: '-0.03em',
+              lineHeight: '1.0',
             }}
           >
             One trial job.

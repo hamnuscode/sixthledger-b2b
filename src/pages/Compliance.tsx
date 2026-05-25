@@ -62,7 +62,7 @@ export default function Compliance() {
             <div>
               <p className="eyebrow mb-4">Compliance</p>
               <h1
-                className="font-display text-5xl md:text-6xl text-pure max-w-3xl"
+                className="font-display text-4xl md:text-5xl text-pure max-w-3xl"
                 style={{ letterSpacing: '-0.03em' }}
               >
                 Everything your due diligence{' '}

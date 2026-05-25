@@ -40,7 +40,7 @@ export default function StatBand() {
             >
               <span
                 className="font-display text-pure block"
-                style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', letterSpacing: '-0.04em', lineHeight: '1' }}
+                style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.03em', lineHeight: '1' }}
               >
                 {stat.numeric
                   ? <CountUp target={parseInt(stat.value)} active={inView} />

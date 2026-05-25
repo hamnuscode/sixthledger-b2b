@@ -27,11 +27,10 @@ export default function Hero() {
         {/* Massive headline */}
         <motion.h1
           id="hero-headline"
-          className="font-display text-pure mb-12"
+          className="font-display text-5xl sm:text-6xl lg:text-7xl text-pure mb-12"
           style={{
-            fontSize: 'clamp(3rem, 8.5vw, 8rem)',
-            letterSpacing: '-0.04em',
-            lineHeight: '0.92',
+            letterSpacing: '-0.03em',
+            lineHeight: '1.0',
           }}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}

@@ -13,7 +13,7 @@ export default function Privacy() {
             </ol>
           </nav>
           <p className="eyebrow mb-4">Legal</p>
-          <h1 className="font-display text-5xl md:text-6xl text-pure mb-5">
+          <h1 className="font-display text-4xl md:text-5xl text-pure mb-5">
             Privacy Policy
           </h1>
           <p className="font-body text-bone text-sm">

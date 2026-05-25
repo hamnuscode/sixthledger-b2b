@@ -52,7 +52,7 @@ export default function Contact() {
             <div>
               <p className="eyebrow mb-4">Get in touch</p>
               <h1
-                className="font-display text-5xl md:text-6xl text-pure"
+                className="font-display text-4xl md:text-5xl text-pure"
                 style={{ letterSpacing: '-0.03em' }}
               >
                 Book a{' '}
