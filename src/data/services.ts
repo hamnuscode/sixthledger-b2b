@@ -87,7 +87,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 'year end-accounts',
+    id: 'year-end-accounts',
     number: '04',
     title: 'Year-End Accounts',
     shortDescription: 'Statutory accounts prepared to FRS 102 or Micro-Entity standard, filed under your practice letterhead.',
