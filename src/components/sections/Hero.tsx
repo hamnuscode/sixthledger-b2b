@@ -66,20 +66,20 @@ export default function Hero() {
           <span className="italic" style={{ color: 'var(--ash)' }}>Keep your clients.</span>
         </motion.h1>
 
-        {/* Two-column: small VSL left, compliance + CTA right */}
+        {/* Two-column: left copy/CTA, right VSL */}
         <motion.div
-          className="grid md:grid-cols-12 gap-8 pt-7 border-t border-smoke"
+          className="grid md:grid-cols-2 gap-10 pt-7 border-t border-smoke items-start"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.28 }}
         >
-          {/* Left: compliance + Calendly */}
-          <div className="md:col-span-7 flex flex-col justify-between gap-6">
-            {/* Compliance badges */}
-            <div className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Compliance credentials">
+          {/* Left: compliance badges + calendly CTA stacked */}
+          <div className="flex flex-col gap-6">
+            {/* Compliance badges — single row, dots as separators */}
+            <div className="flex flex-wrap gap-y-1.5 gap-x-0" aria-label="Compliance credentials">
               {['ICO Registered', 'ACCA-Led', 'UK GDPR Compliant', 'IDTA-Ready', 'MTD Ready'].map((badge, i) => (
-                <span key={badge} className="flex items-center gap-3">
-                  {i > 0 && <span className="text-smoke/60 font-mono" aria-hidden="true">/</span>}
+                <span key={badge} className="flex items-center">
+                  {i > 0 && <span className="text-smoke/60 mx-2 font-mono text-xs" aria-hidden="true">·</span>}
                   <span className="font-mono text-xs text-ash uppercase tracking-label">{badge}</span>
                 </span>
               ))}
@@ -87,31 +87,27 @@ export default function Hero() {
 
             {/* Calendly CTA */}
             <div className="border-t border-smoke pt-5">
-              <p className="eyebrow mb-1">Discovery call</p>
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <p className="font-display text-xl text-pure">
-                  Book a 20-minute call. No sales deck. No pressure.
-                </p>
-                <div className="flex md:justify-end flex-shrink-0">
-                  <a
-                    href="https://calendly.com/sixthledger"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2.5 bg-lime text-obsidian font-body font-semibold text-sm px-6 py-3 hover:bg-lime-soft active:scale-[0.98] transition-all duration-150"
-                  >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.8"/>
-                      <path d="M3 9h18M8 2v4M16 2v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-                    </svg>
-                    Book on Calendly
-                  </a>
-                </div>
-              </div>
+              <p className="eyebrow mb-2">Discovery call</p>
+              <p className="font-display text-xl text-pure mb-4">
+                Book a 20-minute call. No sales deck. No pressure.
+              </p>
+              <a
+                href="https://calendly.com/sixthledger"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-lime text-obsidian font-body font-semibold text-sm px-6 py-3 hover:bg-lime-soft active:scale-[0.98] transition-all duration-150"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.8"/>
+                  <path d="M3 9h18M8 2v4M16 2v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                </svg>
+                Book on Calendly
+              </a>
             </div>
           </div>
 
           {/* Right: VSL */}
-          <div className="md:col-span-5">
+          <div>
             <VSLPlayer />
           </div>
         </motion.div>
