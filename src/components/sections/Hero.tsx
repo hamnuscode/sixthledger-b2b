@@ -68,7 +68,7 @@ export default function Hero() {
 
         {/* Two-column: left copy/CTA, right VSL */}
         <motion.div
-          className="grid md:grid-cols-2 gap-10 pt-7 border-t border-smoke items-center"
+          className="grid md:grid-cols-2 gap-10 pt-5 border-t border-smoke items-start"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.28 }}
