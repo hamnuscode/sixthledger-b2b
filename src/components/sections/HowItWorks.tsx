@@ -4,23 +4,18 @@ import { Reveal, Stagger, item } from '../ui/Reveal'
 const steps = [
   {
     numeral: '01',
-    title: 'Discovery call',
-    body: '20 minutes. We ask about your practice, your software, your volume, and your pain points. We tell you exactly what we can do and at what cost. No sales deck.',
+    title: 'Send us one job',
+    body: 'Pick any live client job from your practice. Self assessment, bookkeeping, VAT return, or year end accounts.',
   },
   {
     numeral: '02',
-    title: 'Paperwork and DPA',
-    body: "Engagement letter, signed DPA, NDA if required. All documentation provided and returned within one business day. We don't start work without it.",
+    title: 'We complete it in your system',
+    body: 'We work inside your accounting software using your existing processes. Output is ready for your review.',
   },
   {
     numeral: '03',
-    title: 'Trial job',
-    body: "We take one live client job. You review the output against your own quality standards before it goes anywhere. If it's not right, we fix it. No charge for corrections on the trial.",
-  },
-  {
-    numeral: '04',
-    title: 'Scale the allocation',
-    body: "Once you're satisfied, agree a scope, per-job, monthly retainer, or a dedicated resource block. Add services as your needs grow. One conversation away.",
+    title: 'You review and deliver',
+    body: 'Check the work against your quality standards. Deliver it to your client under your brand. We are invisible.',
   },
 ]
 
@@ -42,9 +37,7 @@ export default function HowItWorks() {
                 className="font-display text-4xl md:text-5xl text-pure"
                 style={{ letterSpacing: '-0.03em' }}
               >
-                First call to{' '}
-                <span className="italic">first delivery</span>
-                {' '}in a week.
+                Three steps. First delivery in five working days.
               </h2>
             </div>
           </div>

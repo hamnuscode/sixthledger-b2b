@@ -4,18 +4,18 @@ import { Reveal, Stagger, item } from '../ui/Reveal'
 const painPoints = [
   {
     number: '01',
-    title: 'January kills capacity',
-    body: 'Every practice faces the same wall: self-assessment season arrives and there are more returns than hours. You take on locums, your permanent team burns out, or you turn work away. None of those are good options.',
+    title: 'January arrives.',
+    body: 'You are already out of hours. Self assessment volume peaks, your team is at capacity, and the work keeps coming.',
   },
   {
     number: '02',
-    title: 'Year-end compounds it',
-    body: "Year-end accounts, CT returns, payroll year-end, all arriving in the same quarter. Your team is stretched. Quality reviews get rushed. Partners spend time preparing work they should be reviewing.",
+    title: 'Year end stacks on top.',
+    body: 'Partners are reviewing work they should not be doing. Senior time goes on production, not advisory.',
   },
   {
     number: '03',
-    title: "Hiring doesn't scale cleanly",
-    body: "A new hire takes three months to recruit and another three to become productive. By the time they're useful, peak season is over. And next year you do it again. The capacity problem is structural, not temporary.",
+    title: 'Hiring takes months.',
+    body: 'The workload peaks next week. New staff arrive after the pressure is gone. You carry the cost either way.',
   },
 ]
 
@@ -36,8 +36,7 @@ export default function CapacitySection() {
                 className="font-display text-4xl md:text-5xl text-pure max-w-2xl"
                 style={{ letterSpacing: '-0.03em' }}
               >
-                Every UK practice hits the same{' '}
-                <span className="italic">capacity wall.</span>
+                Every UK practice hits the same capacity problem
               </h2>
             </div>
             <p className="font-mono text-xs text-ash uppercase tracking-label hidden lg:block self-end pb-1">
@@ -71,8 +70,7 @@ export default function CapacitySection() {
         <Reveal delay={0.25} type="fade">
           <div className="mt-0 grid md:grid-cols-2 gap-10 items-center py-10 border-b border-smoke">
             <p className="font-display text-xl text-pure italic leading-snug">
-              "There is a better model, a real accounting team that plugs in, does the work,
-              and delivers it back to you ready to review."
+              "Your overflow. Fully prepared. Back in your inbox. Ready to file."
             </p>
             <p className="font-mono text-xs text-lime uppercase tracking-label md:text-right">
               White-label. Invisible. Ready now.

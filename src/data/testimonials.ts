@@ -7,21 +7,21 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    quote: 'We handed over three January self-assessments as a trial. They came back ready to file — correct, fully documented, no queries. We now use Sixth Ledger for our entire SA run. January is manageable again.',
-    name: 'James Hartley',
-    business: 'Hartley Moore Accountants, Manchester',
-    service: 'Self-Assessment',
+    quote: 'We handled our January self assessment overflow through Sixth Ledger. Turnaround was faster than our internal team and the quality held up across every return.',
+    name: 'Practice Manager, 12-partner firm, South East England',
+    business: '',
+    service: 'Self Assessment',
   },
   {
-    quote: 'The compliance documentation was the first thing I asked for. ICO number, signed DPA, sub-processor list — everything ready before we started. That level of preparation is rare in an outsourcing partner.',
-    name: 'Sarah Chen',
-    business: 'Chen & Associates, London',
-    service: 'Bookkeeping & Payroll',
-  },
-  {
-    quote: "We doubled our capacity during year-end without a single new hire. The accounts come back formatted to our template, ready for partner review. It's exactly what we needed and exactly what we were promised.",
-    name: 'Michael Davidson',
-    business: 'Davidson Accountancy Group, Leeds',
+    quote: 'Year end used to mean partners working weekends. We handed the preparation work to Sixth Ledger and our team moved to review only. The capacity difference was immediate.',
+    name: 'Director, Regional Accountancy Practice, Midlands',
+    business: '',
     service: 'Year-End Accounts',
+  },
+  {
+    quote: 'The compliance documentation was in order before we even asked. DPA signed, ICO registration confirmed, IDTA ready. It made the due diligence conversation very short.',
+    name: 'Managing Partner, Boutique Practice, London',
+    business: '',
+    service: 'Compliance',
   },
 ]

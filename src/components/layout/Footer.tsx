@@ -18,8 +18,7 @@ export default function Footer() {
               />
             </Link>
             <p className="font-body text-sm text-ash leading-relaxed mb-6 max-w-xs">
-              ACCA-led accounting outsourcing for UK practices. White-label, compliant,
-              UK working hours.
+              White label accounting support for UK practices. ACCA qualified. ICO registered. UK GDPR compliant. IDTA ready.
             </p>
             <div className="space-y-1.5">
               <p className="font-mono text-xs text-ash uppercase tracking-label">

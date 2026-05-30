@@ -18,12 +18,10 @@ export default function ServicesGrid() {
                 className="font-display text-4xl md:text-5xl text-pure mb-6"
                 style={{ letterSpacing: '-0.03em' }}
               >
-                Nine service lines.{' '}
-                <span className="italic">One team.</span>
+                Everything your practice handles. Returned white label and ready to review.
               </h2>
               <p className="font-body text-bone text-base leading-loose mb-8">
-                From monthly bookkeeping to self-assessment season, payroll to year-end, every
-                routine service your practice delivers, returned to you white-label and ready to review.
+                We plug into your systems and complete routine accounting work so your team focuses on review and advisory, not production work.
               </p>
               <Button to="/services" variant="outline" size="sm">
                 View all services →

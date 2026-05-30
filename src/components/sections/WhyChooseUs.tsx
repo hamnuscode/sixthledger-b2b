@@ -4,23 +4,23 @@ import { Reveal, Stagger, item } from '../ui/Reveal'
 const reasons = [
   {
     numeral: 'i.',
-    title: 'Your clients stay yours',
-    body: 'We work under your credentials, in your software, delivering outputs to you, not to your clients. Your client relationship is untouched. They never know we exist unless you tell them.',
+    title: 'Your clients stay yours.',
+    body: 'We work inside your software under your brand. No client visibility. No confusion.',
   },
   {
     numeral: 'ii.',
-    title: 'ACCA-led, always',
-    body: 'Every piece of work is prepared and reviewed by ACCA-qualified or ACCA-finalist accountants. Not outsourced data entry. Not a template service. Real professional judgement on every file.',
+    title: 'ACCA qualified on every file.',
+    body: 'Not data entry. Not templates. Real accounting judgement applied to every engagement.',
   },
   {
     numeral: 'iii.',
-    title: 'Compliance infrastructure included',
-    body: 'ICO-registered, UK GDPR-compliant, IDTA-ready. Signed DPA before work starts. Sub-processor list available. The compliance paperwork your clients will ask for is ready before you need it.',
+    title: 'Compliance ready from day one.',
+    body: 'ICO registered handling. UK GDPR compliance. IDTA readiness. Data processing agreements signed before work starts.',
   },
   {
     numeral: 'iv.',
-    title: 'Start with one job',
-    body: 'No minimum commitment. Trial us on a single VAT return, a set of self-assessments, or a month of bookkeeping. Review the output. Decide from there. No long-term contract required.',
+    title: 'Start with one job.',
+    body: 'No contract. No minimum volume. No long term lock in.',
   },
 ]
 

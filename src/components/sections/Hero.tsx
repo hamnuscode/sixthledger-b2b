@@ -61,9 +61,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.12 }}
         >
-          Hand us the work.
+          We do the work. You deliver it.
           <br />
-          <span className="italic" style={{ color: 'var(--ash)' }}>Keep your clients.</span>
+          <span className="italic" style={{ color: 'var(--ash)' }}>Your clients never know we exist.</span>
         </motion.h1>
 
         {/* Two-column: left copy/CTA, right VSL */}

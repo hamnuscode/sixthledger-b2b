@@ -31,10 +31,10 @@ export default function ClosingCTA() {
               lineHeight: '1.0',
             }}
           >
-            One trial job.
+            Send us one job. Review the output.
             <br />
             <span className="italic" style={{ color: 'var(--ash)' }}>
-              That's the whole ask.
+              Decide what happens next.
             </span>
           </h2>
         </Reveal>
@@ -43,8 +43,7 @@ export default function ClosingCTA() {
         <Reveal delay={0.2}>
           <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-smoke mt-12">
             <p className="font-body text-bone text-lg leading-loose">
-              Give us one job from one client. Review the output against your own standards.
-              Decide from there. No contract, no commitment until you are satisfied.
+              No contract. No minimum volume. No long term commitment. Send us one piece of work, see what comes back, and take it from there.
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-5">
               <Button to="/contact" size="lg">Book a 20-minute call</Button>
