@@ -1,4 +1,5 @@
 import Hero from '../components/sections/Hero'
+import StatBand from '../components/sections/StatBand'
 import TrustStrip from '../components/sections/TrustStrip'
 import CapacitySection from '../components/sections/CapacitySection'
 import ServicesGrid from '../components/sections/ServicesGrid'
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <StatBand />
       <TrustStrip />
       <CapacitySection />
       <ServicesGrid />
