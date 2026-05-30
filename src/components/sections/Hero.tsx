@@ -35,13 +35,13 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: 'var(--obsidian)', paddingTop: '8rem', paddingBottom: '0' }}
+      style={{ background: 'var(--obsidian)', paddingTop: '6rem', paddingBottom: '0' }}
       aria-labelledby="hero-headline"
     >
       <div className="container">
         {/* Top meta strip */}
         <motion.div
-          className="flex items-center justify-between pb-5 mb-12 border-b border-smoke"
+          className="flex items-center justify-between pb-4 mb-8 border-b border-smoke"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
@@ -55,7 +55,7 @@ export default function Hero() {
         {/* Headline */}
         <motion.h1
           id="hero-headline"
-          className="font-display text-5xl sm:text-6xl lg:text-7xl text-pure mb-12"
+          className="font-display text-5xl sm:text-6xl lg:text-7xl text-pure mb-8"
           style={{ letterSpacing: '-0.03em', lineHeight: '1.0' }}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function Hero() {
 
         {/* Subtext + CTAs */}
         <motion.div
-          className="grid md:grid-cols-2 gap-12 pt-10 border-t border-smoke"
+          className="grid md:grid-cols-2 gap-8 pt-7 border-t border-smoke"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.32 }}
@@ -87,7 +87,7 @@ export default function Hero() {
 
         {/* Compliance strip */}
         <motion.div
-          className="flex flex-wrap gap-x-6 gap-y-2 mt-10 pt-8 border-t border-smoke/40"
+          className="flex flex-wrap gap-x-6 gap-y-2 mt-6 pt-6 border-t border-smoke/40"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.54 }}
@@ -103,12 +103,12 @@ export default function Hero() {
 
         {/* Calendly booking strip */}
         <motion.div
-          className="border-t border-smoke mt-10"
+          className="border-t border-smoke mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <div className="grid md:grid-cols-12 items-center gap-6 py-8">
+          <div className="grid md:grid-cols-12 items-center gap-6 py-5">
             <div className="md:col-span-8">
               <p className="eyebrow mb-1">Discovery call</p>
               <p className="font-display text-xl text-pure">
@@ -138,7 +138,7 @@ export default function Hero() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-smoke">
             {stats.map((stat, i) => (
-              <div key={stat.label} className={`py-8 px-8 flex flex-col ${i === 0 ? 'pl-0' : ''}`}>
+              <div key={stat.label} className={`py-6 px-8 flex flex-col ${i === 0 ? 'pl-0' : ''}`}>
                 <span
                   className="font-display text-pure block"
                   style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', letterSpacing: '-0.03em', lineHeight: '1' }}
