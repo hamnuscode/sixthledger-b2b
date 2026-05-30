@@ -30,7 +30,7 @@ export default function ServiceDetail() {
           </nav>
           <div className="flex items-end justify-between border-b border-smoke pb-8 mb-8">
             <div>
-              <p className="eyebrow mb-4">{service.number} — Service</p>
+              <p className="eyebrow mb-4">{service.number}, Service</p>
               <h1
                 className="font-display text-4xl md:text-5xl text-pure"
                 style={{ letterSpacing: '-0.03em' }}
@@ -46,7 +46,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      {/* Content — full width document layout */}
+      {/* Content, full width document layout */}
       <section className="section bg-obsidian">
         <div className="container">
           <div className="max-w-4xl">

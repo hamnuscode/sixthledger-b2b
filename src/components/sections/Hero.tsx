@@ -18,7 +18,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
         >
-          <p className="eyebrow">— For UK accounting practices</p>
+          <p className="eyebrow">For UK accounting practices</p>
           <p className="font-mono text-xs text-ash uppercase tracking-label hidden md:block">
             ACCA-Led · ICO Registered · UK GDPR
           </p>

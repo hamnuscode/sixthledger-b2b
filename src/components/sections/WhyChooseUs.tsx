@@ -5,7 +5,7 @@ const reasons = [
   {
     numeral: 'i.',
     title: 'Your clients stay yours',
-    body: 'We work under your credentials, in your software, delivering outputs to you — not to your clients. Your client relationship is untouched. They never know we exist unless you tell them.',
+    body: 'We work under your credentials, in your software, delivering outputs to you, not to your clients. Your client relationship is untouched. They never know we exist unless you tell them.',
   },
   {
     numeral: 'ii.',

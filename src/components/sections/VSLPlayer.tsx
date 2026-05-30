@@ -47,7 +47,7 @@ export default function VSLPlayer() {
                   className="font-display text-xl md:text-2xl text-bone italic leading-snug mb-6 max-w-sm"
                   style={{ letterSpacing: '-0.01em' }}
                 >
-                  "The answer to your capacity crunch — without the hiring risk."
+                  "The answer to your capacity crunch, without the hiring risk."
                 </p>
 
                 <button

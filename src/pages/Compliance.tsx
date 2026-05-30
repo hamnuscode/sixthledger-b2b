@@ -16,7 +16,7 @@ const complianceItems = [
     badge: 'GDPR',
     title: 'UK GDPR Compliant',
     subtitle: 'UK General Data Protection Regulation',
-    body: "We process personal data strictly in accordance with the UK General Data Protection Regulation. Every client engagement begins with a signed Data Processing Agreement (DPA). We provide our standard DPA and sub-processor list before work commences — not on request, but as a matter of course.",
+    body: "We process personal data strictly in accordance with the UK General Data Protection Regulation. Every client engagement begins with a signed Data Processing Agreement (DPA). We provide our standard DPA and sub-processor list before work commences, not on request, but as a matter of course.",
     link: '/privacy',
     linkText: 'Read our Privacy Policy →',
   },
@@ -32,7 +32,7 @@ const complianceItems = [
     badge: 'MTD',
     title: 'Making Tax Digital Ready',
     subtitle: "HMRC MTD-compliant submissions",
-    body: "All VAT return preparation is conducted within MTD-compatible platforms. We work in Xero, QuickBooks, Sage, and FreeAgent — all HMRC-approved for MTD. Your practice retains filing authority; we prepare the return and deliver it for your submission.",
+    body: "All VAT return preparation is conducted within MTD-compatible platforms. We work in Xero, QuickBooks, Sage, and FreeAgent, all HMRC-approved for MTD. Your practice retains filing authority; we prepare the return and deliver it for your submission.",
     link: '/services/vat',
     linkText: 'Learn about our VAT service →',
   },
@@ -40,7 +40,7 @@ const complianceItems = [
     badge: 'ACCA',
     title: 'ACCA-Led Delivery',
     subtitle: 'Association of Chartered Certified Accountants',
-    body: "Our accounting team is led by ACCA-qualified accountants and ACCA finalists. All work is delivered and reviewed under ACCA's professional ethics code — requiring confidentiality, integrity, objectivity, and professional competence. We are not a data entry service.",
+    body: "Our accounting team is led by ACCA-qualified accountants and ACCA finalists. All work is delivered and reviewed under ACCA's professional ethics code, requiring confidentiality, integrity, objectivity, and professional competence. We are not a data entry service.",
     link: 'https://www.accaglobal.com/',
     linkText: 'Learn about ACCA →',
   },
@@ -79,7 +79,7 @@ export default function Compliance() {
         </div>
       </section>
 
-      {/* Credentials — row list */}
+      {/* Credentials, row list */}
       <section className="section bg-obsidian" aria-label="Compliance credentials">
         <div className="container">
           <Stagger stagger={0.07}>
@@ -131,8 +131,8 @@ export default function Compliance() {
                 Request our GDPR pack
               </h2>
               <p className="font-body text-bone text-base leading-loose mb-4">
-                For practices that require formal documentation before engaging — or need
-                to satisfy their own professional indemnity insurer — we provide a full
+                For practices that require formal documentation before engaging, or need
+                to satisfy their own professional indemnity insurer, we provide a full
                 GDPR pack on request. Delivered within one business day.
               </p>
               <p className="font-body text-bone text-base leading-loose mb-8">

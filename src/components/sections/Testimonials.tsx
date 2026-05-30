@@ -52,7 +52,7 @@ export default function Testimonials() {
                 </footer>
               </div>
 
-              {/* Service tag — right aligned */}
+              {/* Service tag, right aligned */}
               <div className="md:col-span-3 md:flex md:items-start md:justify-end">
                 <span className="font-mono text-xs text-lime uppercase tracking-label">
                   {t.service}

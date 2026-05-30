@@ -13,13 +13,13 @@ const services = [
   'Company Secretarial',
   'Annual Accounts',
   'Multiple services',
-  'Not sure — want advice',
+  'Not sure, want advice',
 ]
 
 const volumes = [
-  '1–5 clients',
-  '6–20 clients',
-  '21–50 clients',
+  '1 to 5 clients',
+  '6 to 20 clients',
+  '21 to 50 clients',
   '50+ clients',
   "Not sure yet",
 ]
@@ -184,7 +184,7 @@ export default function Contact() {
                   <p className="eyebrow mb-5">What to expect</p>
                   <ol className="space-y-6">
                     {[
-                      "We'll ask about your practice — size, software, volume, what's under pressure.",
+                      "We'll ask about your practice, size, software, volume, what's under pressure.",
                       "We'll tell you exactly what we can handle and how we'd approach your situation.",
                       "We'll give you a fee indication on the call or within 24 hours.",
                       "No commitment required. If we're not the right fit, we'll say so.",
@@ -204,18 +204,15 @@ export default function Contact() {
                       <span className="font-mono text-xs text-ash group-hover:text-lime transition-colors uppercase tracking-label w-4">@</span>
                       <span className="font-body text-sm">info@sixthledger.com</span>
                     </a>
-                    <a href="tel:+923000692222" className="flex items-center gap-3 text-bone hover:text-lime transition-colors group">
-                      <span className="font-mono text-xs text-ash group-hover:text-lime transition-colors uppercase tracking-label w-4">#</span>
-                      <span className="font-body text-sm">+92 300 0692222</span>
-                    </a>
+
                     <div className="flex items-start gap-3 text-ash">
                       <span className="font-mono text-xs uppercase tracking-label w-4">+</span>
                       <address className="font-body text-xs not-italic leading-relaxed">
-                        Emaar Canyon Views<br />Islamabad, Pakistan
+                        Islamabad, Pakistan
                       </address>
                     </div>
                     <p className="font-mono text-xs text-ash uppercase tracking-label pt-4 border-t border-smoke">
-                      Mon–Fri · UK working hours
+                      Mon to Fri · UK working hours
                     </p>
                   </div>
                 </div>

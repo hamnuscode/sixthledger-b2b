@@ -34,7 +34,7 @@ export default function FAQSection() {
           </div>
         </Reveal>
 
-        {/* Accordion — full width, numbered */}
+        {/* Accordion, full width, numbered */}
         <Reveal delay={0.1}>
           <div role="list" className="mt-0">
             {homeFaqs.map((faq, i) => (

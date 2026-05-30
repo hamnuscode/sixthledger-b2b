@@ -22,7 +22,7 @@ export default function ServicesGrid() {
                 <span className="italic">One team.</span>
               </h2>
               <p className="font-body text-bone text-base leading-loose mb-8">
-                From monthly bookkeeping to self-assessment season, payroll to year-end — every
+                From monthly bookkeeping to self-assessment season, payroll to year-end, every
                 routine service your practice delivers, returned to you white-label and ready to review.
               </p>
               <Button to="/services" variant="outline" size="sm">

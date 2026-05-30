@@ -10,7 +10,7 @@ const onboardingSteps = [
     phase: 'Phase 01',
     title: 'Discovery call',
     duration: '20 minutes',
-    body: "We ask about your practice — size, software, client mix, peak periods, what's breaking. You ask us about qualifications, compliance, process. We confirm whether we're the right fit. No sales deck, no pressure.",
+    body: "We ask about your practice, size, software, client mix, peak periods, what's breaking. You ask us about qualifications, compliance, process. We confirm whether we're the right fit. No sales deck, no pressure.",
     outcome: 'You understand exactly what we can do and at what cost.',
   },
   {
@@ -23,7 +23,7 @@ const onboardingSteps = [
   {
     phase: 'Phase 03',
     title: 'Trial job',
-    duration: '5–10 working days',
+    duration: '5 to 10 working days',
     body: "You send us one live client job. We process it in your accounting software and deliver the output to you for review. You check it against your quality standards. We incorporate any feedback. No charge for corrections on the trial.",
     outcome: 'You judge our quality before committing to anything ongoing.',
   },
@@ -31,7 +31,7 @@ const onboardingSteps = [
     phase: 'Phase 04',
     title: 'Ongoing engagement',
     duration: 'As agreed',
-    body: "Once satisfied, agree a scope — per-job, monthly retainer, or dedicated allocation. Work flows through a simple instruction system. Outputs delivered to your agreed schedule. Scale up or down with 30 days' notice.",
+    body: "Once satisfied, agree a scope, per-job, monthly retainer, or dedicated allocation. Work flows through a simple instruction system. Outputs delivered to your agreed schedule. Scale up or down with 30 days' notice.",
     outcome: "Capacity that scales with your practice, not against it.",
   },
 ]
@@ -40,17 +40,17 @@ const principles = [
   {
     number: '01',
     title: 'White-label by default',
-    body: 'We work under your credentials and deliver to you. Your clients see your practice name, not ours. This is not optional — it is how we operate on every engagement.',
+    body: 'We work under your credentials and deliver to you. Your clients see your practice name, not ours. This is not optional, it is how we operate on every engagement.',
   },
   {
     number: '02',
     title: 'Nothing without documentation',
-    body: 'DPA signed before work starts. No exceptions. UK GDPR compliance is not a box we tick — it is a condition of every engagement.',
+    body: 'DPA signed before work starts. No exceptions. UK GDPR compliance is not a box we tick, it is a condition of every engagement.',
   },
   {
     number: '03',
     title: 'You review, we fix',
-    body: 'Every output is delivered to your review. If it does not meet your standards, we correct it at no additional charge. Quality is not a feature — it is the baseline.',
+    body: 'Every output is delivered to your review. If it does not meet your standards, we correct it at no additional charge. Quality is not a feature, it is the baseline.',
   },
   {
     number: '04',
@@ -91,7 +91,7 @@ export default function HowWeWork() {
         </div>
       </section>
 
-      {/* Onboarding phases — vertical timeline */}
+      {/* Onboarding phases, vertical timeline */}
       <section className="section bg-obsidian" aria-label="Onboarding process">
         <div className="container">
           <Reveal delay={0.05}>

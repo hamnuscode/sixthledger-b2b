@@ -1,0 +1,45 @@
+import { Reveal } from '../ui/Reveal'
+
+export default function FoundersSection() {
+  return (
+    <section className="section border-y border-smoke" style={{ background: 'var(--coal)' }} aria-labelledby="founders-heading">
+      <div className="container">
+        <Reveal delay={0.05}>
+          <div className="flex items-end justify-between pb-10 border-b border-smoke mb-12">
+            <div>
+              <p className="eyebrow mb-4">Leadership</p>
+              <h2 id="founders-heading" className="font-display text-4xl md:text-5xl text-pure" style={{ letterSpacing: '-0.025em' }}>
+                The people{' '}
+                <span className="italic">behind the work.</span>
+              </h2>
+            </div>
+          </div>
+        </Reveal>
+
+        <div className="grid sm:grid-cols-2 gap-12 max-w-2xl">
+          {[
+            { name: 'Shayan Ahmed Shujaat', role: 'Chief Executive Officer', initials: 'SA' },
+            { name: 'Co-Founder', role: 'Head of Operations', initials: 'CF' },
+          ].map((founder) => (
+            <Reveal key={founder.name} delay={0.1}>
+              <div className="group cursor-default">
+                {/* Photo placeholder */}
+                <div
+                  className="w-full aspect-square bg-obsidian border border-smoke group-hover:border-lime transition-colors duration-200 mb-6 flex items-center justify-center"
+                  style={{ maxWidth: '260px' }}
+                  aria-label={`Photo of ${founder.name}`}
+                >
+                  <span className="font-display text-4xl text-ash/20 italic select-none">
+                    {founder.initials}
+                  </span>
+                </div>
+                <h3 className="font-display text-xl text-pure mb-1">{founder.name}</h3>
+                <p className="font-mono text-xs text-lime uppercase tracking-label">{founder.role}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

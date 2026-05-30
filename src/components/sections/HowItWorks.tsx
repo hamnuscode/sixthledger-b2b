@@ -20,7 +20,7 @@ const steps = [
   {
     numeral: '04',
     title: 'Scale the allocation',
-    body: "Once you're satisfied, agree a scope — per-job, monthly retainer, or a dedicated resource block. Add services as your needs grow. One conversation away.",
+    body: "Once you're satisfied, agree a scope, per-job, monthly retainer, or a dedicated resource block. Add services as your needs grow. One conversation away.",
   },
 ]
 

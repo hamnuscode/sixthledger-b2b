@@ -16,10 +16,7 @@ export default function ClosingCTA() {
               <a href="mailto:info@sixthledger.com" className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label">
                 info@sixthledger.com
               </a>
-              <span className="text-smoke/60 hidden sm:block" aria-hidden="true">/</span>
-              <a href="tel:+923000692222" className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label hidden sm:block">
-                +92 300 0692222
-              </a>
+
             </div>
           </div>
         </Reveal>
@@ -59,7 +56,7 @@ export default function ClosingCTA() {
         {/* Footer strip */}
         <Reveal delay={0.3} type="fade">
           <div className="flex flex-wrap gap-x-8 gap-y-2 mt-12 pt-8 border-t border-smoke/40">
-            <span className="font-mono text-xs text-ash uppercase tracking-label">Mon–Fri · UK working hours</span>
+            <span className="font-mono text-xs text-ash uppercase tracking-label">Mon to Fri · UK working hours</span>
             <span className="font-mono text-xs text-ash uppercase tracking-label">Response within 1 business day</span>
             <span className="font-mono text-xs text-ash uppercase tracking-label">DPA signed before work starts</span>
           </div>

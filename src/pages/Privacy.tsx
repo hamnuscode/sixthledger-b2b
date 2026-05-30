@@ -28,7 +28,7 @@ export default function Privacy() {
 
             <h2>1. Who we are</h2>
             <p>
-              Sixth Ledger (SIXTHLEDGER (PVT) LTD), headquartered at Emaar Canyon Views, Islamabad,
+              Sixth Ledger (SIXTHLEDGER (PVT) LTD), headquartered in Islamabad,
               Pakistan, operates the b2b.sixthledger.com website and provides white-label accounting
               outsourcing services to UK accounting practices. References to "we", "us", and "our"
               mean Sixth Ledger. References to "you" and "your" mean the accounting practice engaging
@@ -161,7 +161,7 @@ export default function Privacy() {
             </p>
             <p>
               <strong className="text-pure">Email:</strong> info@sixthledger.com<br />
-              <strong className="text-pure">Address:</strong> Emaar Canyon Views, Islamabad, Pakistan
+              <strong className="text-pure">Address:</strong> Islamabad, Pakistan
             </p>
             <p>
               UK practices may also raise concerns with the Information Commissioner's Office at

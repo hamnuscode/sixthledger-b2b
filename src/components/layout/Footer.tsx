@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-12 gap-0 divide-y md:divide-y-0 md:divide-x divide-smoke border-b border-smoke">
           {/* Brand column */}
           <div className="md:col-span-4 py-12 md:pr-12">
-            <Link to="/" aria-label="Sixth Ledger — Home" className="block mb-6">
+            <Link to="/" aria-label="Sixth Ledger, Home" className="block mb-6">
               <img
                 src="/logo-black.png"
                 alt="Sixth Ledger"
@@ -30,11 +30,11 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-bone hover:text-lime transition-colors"
                 >
-                  ZA — pending
+                  ZA (pending)
                 </a>
               </p>
               <p className="font-mono text-xs text-ash uppercase tracking-label">ACCA-led delivery</p>
-              <p className="font-mono text-xs text-ash uppercase tracking-label">Mon–Fri · UK hours</p>
+              
             </div>
           </div>
 
@@ -98,14 +98,10 @@ export default function Footer() {
                     info@sixthledger.com
                   </a>
                 </li>
-                <li>
-                  <a href="tel:+923000692222" className="font-body text-sm text-bone hover:text-lime transition-colors">
-                    +92 300 0692222
-                  </a>
-                </li>
+
                 <li>
                   <address className="font-body text-xs text-ash not-italic leading-relaxed">
-                    Emaar Canyon Views<br />Islamabad, Pakistan
+                    Islamabad, Pakistan
                   </address>
                 </li>
               </ul>
@@ -119,19 +115,9 @@ export default function Footer() {
             © {new Date().getFullYear()} SIXTHLEDGER (PVT) LTD
           </p>
           <div className="flex flex-wrap gap-6">
-            {[
-              { to: '/privacy', label: 'Privacy Policy' },
-              { to: '/terms', label: 'Terms' },
-              { to: '/cookies', label: 'Cookies' },
-            ].map(item => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label"
-              >
-                {item.label}
-              </Link>
-            ))}
+              <a href="https://drive.google.com/drive/folders/1FQoRnfnJvz4Ctc_RhHTjiYUhzJZW5bRX?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label">Privacy Policy</a>
+              <Link to="/terms" className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label">Terms</Link>
+              <Link to="/cookies" className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label">Cookies</Link>
           </div>
         </div>
       </div>

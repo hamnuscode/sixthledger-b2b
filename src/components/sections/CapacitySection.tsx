@@ -10,7 +10,7 @@ const painPoints = [
   {
     number: '02',
     title: 'Year-end compounds it',
-    body: "Year-end accounts, CT returns, payroll year-end — all arriving in the same quarter. Your team is stretched. Quality reviews get rushed. Partners spend time preparing work they should be reviewing.",
+    body: "Year-end accounts, CT returns, payroll year-end, all arriving in the same quarter. Your team is stretched. Quality reviews get rushed. Partners spend time preparing work they should be reviewing.",
   },
   {
     number: '03',
@@ -71,7 +71,7 @@ export default function CapacitySection() {
         <Reveal delay={0.25} type="fade">
           <div className="mt-0 grid md:grid-cols-2 gap-10 items-center py-10 border-b border-smoke">
             <p className="font-display text-xl text-pure italic leading-snug">
-              "There is a better model — a real accounting team that plugs in, does the work,
+              "There is a better model, a real accounting team that plugs in, does the work,
               and delivers it back to you ready to review."
             </p>
             <p className="font-mono text-xs text-lime uppercase tracking-label md:text-right">

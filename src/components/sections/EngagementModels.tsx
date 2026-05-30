@@ -4,10 +4,10 @@ import { Reveal, Stagger, item } from '../ui/Reveal'
 
 const models = [
   {
-    eyebrow: '01 — Flexible',
+    eyebrow: '01, Flexible',
     name: 'Per-Job',
     tagline: 'Pay for what you need, when you need it.',
-    description: 'Suitable for practices that need occasional overflow capacity — a batch of self-assessments in January, a year-end crunch, or a one-off VAT return.',
+    description: 'Suitable for practices that need occasional overflow capacity, a batch of self-assessments in January, a year-end crunch, or a one-off VAT return.',
     features: [
       'Priced per completed job or task',
       'No monthly commitment',
@@ -19,7 +19,7 @@ const models = [
     recommended: false,
   },
   {
-    eyebrow: '02 — Most common',
+    eyebrow: '02, Most common',
     name: 'Monthly Retainer',
     tagline: 'Predictable cost. Predictable capacity.',
     description: 'A defined scope of work at a fixed monthly fee. Ideal for practices with a stable client base looking to extend capacity without adding headcount.',
@@ -34,10 +34,10 @@ const models = [
     recommended: true,
   },
   {
-    eyebrow: '03 — High volume',
+    eyebrow: '03, High volume',
     name: 'Full Allocation',
     tagline: 'A dedicated resource block, on demand.',
-    description: 'For practices with high or unpredictable volume — a named allocation of capacity across multiple service lines, managed as an extension of your operations.',
+    description: 'For practices with high or unpredictable volume, a named allocation of capacity across multiple service lines, managed as an extension of your operations.',
     features: [
       'Dedicated accountant or team allocation',
       'Multiple service lines in scope',
@@ -67,7 +67,7 @@ export default function EngagementModels() {
                 <span className="italic">work with us.</span>
               </h2>
               <p className="font-body text-bone text-base leading-loose max-w-xl">
-                We don't publish rate cards — every practice is different.
+                We don't publish rate cards, every practice is different.
                 Specific pricing confirmed at the discovery call.
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function EngagementModels() {
                 <ul className="space-y-3 flex-1">
                   {model.features.map(feature => (
                     <li key={feature} className="flex items-start gap-3">
-                      <span className="font-mono text-lime text-xs mt-0.5 flex-shrink-0">—</span>
+                      <span className="font-mono text-lime text-xs mt-0.5 flex-shrink-0"></span>
                       <span className="font-body text-sm text-bone leading-snug">{feature}</span>
                     </li>
                   ))}
@@ -118,7 +118,7 @@ export default function EngagementModels() {
 
         <Reveal delay={0.2} type="fade">
           <p className="font-mono text-xs text-ash mt-8 uppercase tracking-label">
-            — Specific pricing confirmed at discovery call based on your client mix and volume
+           , Specific pricing confirmed at discovery call based on your client mix and volume
           </p>
         </Reveal>
       </div>
