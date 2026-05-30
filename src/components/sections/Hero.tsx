@@ -3,6 +3,38 @@ import VSLPlayer from './VSLPlayer'
 
 const EASE = [0.16, 1, 0.3, 1]
 
+const flowSteps = [
+  {
+    label: 'Receive',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="2" width="10" height="13" rx="1" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M6 2v3.5h4.5" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
+        <path d="M5.5 8.5h6M5.5 11.5h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+        <path d="M14 9l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Process',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M10 13a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Deliver',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.3"/>
+        <path d="M6.5 10l2.5 2.5 5-5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+  },
+]
+
 export default function Hero() {
   return (
     <section
@@ -65,6 +97,59 @@ export default function Hero() {
                   <span className="font-mono text-xs text-ash uppercase tracking-label">{badge}</span>
                 </span>
               ))}
+            </div>
+
+            {/* Workflow diagram */}
+            <div className="border-t border-smoke pt-6">
+              <p className="font-mono text-[10px] text-ash/60 uppercase tracking-widest mb-4">How it works</p>
+              <div className="flex items-start">
+                {flowSteps.map((step, i) => (
+                  <div key={step.label} className="flex items-center flex-1 min-w-0">
+                    <div className="flex flex-col items-center gap-2.5 flex-shrink-0">
+                      <motion.div
+                        className="w-12 h-12 border border-smoke flex items-center justify-center text-lime"
+                        style={{ background: 'var(--coal)' }}
+                        initial={{ opacity: 0, scale: 0.75 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.4, ease: EASE, delay: 0.55 + i * 0.18 }}
+                      >
+                        {step.icon}
+                      </motion.div>
+                      <motion.span
+                        className="font-mono text-[10px] text-ash uppercase tracking-widest"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3, delay: 0.75 + i * 0.18 }}
+                      >
+                        {step.label}
+                      </motion.span>
+                    </div>
+                    {i < flowSteps.length - 1 && (
+                      <div className="flex items-center flex-1 mx-2 mb-7">
+                        <div className="relative flex-1 h-px bg-smoke overflow-hidden">
+                          <motion.div
+                            className="absolute inset-0 bg-lime"
+                            initial={{ scaleX: 0 }}
+                            animate={{ scaleX: 1 }}
+                            style={{ transformOrigin: 'left' }}
+                            transition={{ duration: 0.45, ease: EASE, delay: 0.72 + i * 0.18 }}
+                          />
+                        </div>
+                        <motion.svg
+                          width="5" height="8" viewBox="0 0 5 8"
+                          className="text-lime flex-shrink-0"
+                          style={{ marginLeft: '-1px' }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.2, delay: 0.9 + i * 0.18 }}
+                        >
+                          <path d="M0 0L5 4L0 8" fill="currentColor"/>
+                        </motion.svg>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Calendly CTA */}
