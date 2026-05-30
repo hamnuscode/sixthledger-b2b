@@ -85,6 +85,32 @@ export default function Hero() {
               ))}
             </div>
 
+            {/* Workflow flow diagram */}
+            <div className="border-t border-smoke pt-4 pb-2">
+              <div className="flex items-center gap-0">
+                <div className="flex flex-col items-center gap-1 flex-shrink-0">
+                  <span className="text-lime">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="8" height="11" rx="1" stroke="currentColor" strokeWidth="1.1"/><path d="M4 1v2.5h4" stroke="currentColor" strokeWidth="1.1" strokeLinejoin="round"/><path d="M3.5 6h5M3.5 8.5h3.5" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round"/></svg>
+                  </span>
+                  <span className="font-mono text-[9px] text-ash uppercase tracking-widest whitespace-nowrap">Receive</span>
+                </div>
+                <div className="flex-1 h-px bg-smoke mx-1.5 mb-3" />
+                <div className="flex flex-col items-center gap-1 flex-shrink-0">
+                  <span className="text-lime">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 9a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" strokeWidth="1.1"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round"/></svg>
+                  </span>
+                  <span className="font-mono text-[9px] text-ash uppercase tracking-widest whitespace-nowrap">Process</span>
+                </div>
+                <div className="flex-1 h-px bg-smoke mx-1.5 mb-3" />
+                <div className="flex flex-col items-center gap-1 flex-shrink-0">
+                  <span className="text-lime">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.1"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </span>
+                  <span className="font-mono text-[9px] text-ash uppercase tracking-widest whitespace-nowrap">Deliver</span>
+                </div>
+              </div>
+            </div>
+
             {/* Calendly CTA */}
             <div className="border-t border-smoke pt-5">
               <p className="eyebrow mb-2">Discovery call</p>

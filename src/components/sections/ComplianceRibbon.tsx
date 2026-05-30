@@ -16,6 +16,16 @@ export default function ComplianceRibbon() {
       aria-labelledby="compliance-ribbon-heading"
     >
       <div className="container">
+        <div className="flex items-center gap-6 pb-8 mb-0 border-b border-smoke">
+          <svg width="40" height="46" viewBox="0 0 40 46" fill="none" aria-hidden="true" className="text-lime flex-shrink-0" style={{ opacity: 0.7 }}>
+            <path d="M20 2L3 9v13c0 12 7 22 17 26 10-4 17-14 17-26V9L20 2z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+            <path d="M12 23l6 6 10-10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <div>
+            <p className="font-display text-base text-pure">Data protection by design</p>
+            <p className="font-body text-xs text-ash mt-0.5 leading-snug">ICO registered. UK GDPR compliant. DPA signed before every engagement. IDTA-ready for international transfers.</p>
+          </div>
+        </div>
         <Stagger
           className="grid grid-cols-2 md:grid-cols-4 divide-x divide-smoke"
           stagger={0.07}
