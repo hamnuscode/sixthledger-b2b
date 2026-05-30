@@ -7,7 +7,7 @@ const facts = [
   { label: 'Headquarters', value: 'Islamabad, Pakistan' },
   { label: 'Legal entity', value: 'SIXTHLEDGER (PVT) LTD' },
   { label: 'ICO Registration', value: 'ZA, pending' },
-  { label: 'Team qualifications', value: 'ACCA-qualified & ACCA finalists' },
+  { label: 'Team qualifications', value: 'ACCA qualified & ACCA finalists' },
   { label: 'Operating hours', value: 'UK working hours (GMT)' },
   { label: 'Languages', value: 'English' },
   { label: 'Clients served', value: 'UK accounting practices' },
@@ -41,7 +41,7 @@ export default function About() {
             </div>
           </div>
           <p className="font-body text-bone text-lg leading-loose max-w-2xl">
-            ACCA-led. ICO-registered. UK working hours. Built specifically to extend the
+            ACCA led. ICO registered. UK working hours. Built specifically to extend the
             capacity of UK accounting practices without adding to their headcount.
           </p>
         </div>
@@ -58,10 +58,10 @@ export default function About() {
               </h2>
               <div className="space-y-6">
                 {[
-                  "Sixth Ledger exists because UK accounting practices face a structural problem: demand peaks in predictable cycles, January self-assessment season, year-end, payroll year-end, but hiring is slow, expensive, and binds you to fixed costs you don't need outside those windows.",
-                  "We built Sixth Ledger as the answer: a team of ACCA-qualified and ACCA-finalist accountants, operating on UK working hours, delivering work white-label under your practice credentials. Your clients don't know we exist. Your partners don't deal with recruitment. Your overhead stays flat.",
-                  "Every engagement starts with a signed Data Processing Agreement and ICO-registered data handling. Compliance is not an add-on. It is the foundation that makes the whole arrangement possible.",
-                  "We are headquartered in Islamabad, Pakistan. We are fully transparent about this. We have the IDTA-ready transfer mechanisms, the signed DPAs, and the professional qualifications that make cross-border accounting work possible, auditable, and safe.",
+                  "Sixth Ledger exists because UK accounting practices face a structural problem: demand peaks in predictable cycles, January self assessment season, year end, payroll year end, but hiring is slow, expensive, and binds you to fixed costs you don't need outside those windows.",
+                  "We built Sixth Ledger as the answer: a team of ACCA qualified and ACCA finalist accountants, operating on UK working hours, delivering work white label under your practice credentials. Your clients don't know we exist. Your partners don't deal with recruitment. Your overhead stays flat.",
+                  "Every engagement starts with a signed Data Processing Agreement and ICO registered data handling. Compliance is not an add-on. It is the foundation that makes the whole arrangement possible.",
+                  "We are headquartered in Islamabad, Pakistan. We are fully transparent about this. We have the IDTA ready transfer mechanisms, the signed DPAs, and the professional qualifications that make cross-border accounting work possible, auditable, and safe.",
                 ].map((para) => (
                   <p key={para.slice(0, 30)} className="font-body text-bone text-base leading-loose">{para}</p>
                 ))}
@@ -108,19 +108,19 @@ export default function About() {
                 initial: 'S',
                 name: 'Shayan Ahmed Shujaat',
                 role: 'Chief Executive Officer',
-                bio: "Leads Sixth Ledger's client relationships and quality standards. ACCA-affiliated. Oversees all client engagements and practice partnerships.",
+                bio: "Leads Sixth Ledger's client relationships and quality standards. ACCA affiliated. Oversees all client engagements and practice partnerships.",
               },
               {
                 initial: 'T',
                 name: 'Accounting Team',
                 role: 'ACCA Qualified & Finalists',
-                bio: '3 ACCA-qualified and 2 ACCA-finalist accountants covering bookkeeping, payroll, VAT, year-end accounts, and tax compliance. All operating under ACCA ethics code.',
+                bio: '3 ACCA qualified and 2 ACCA finalist accountants covering bookkeeping, payroll, VAT, year end accounts, and tax compliance. All operating under ACCA ethics code.',
               },
               {
                 initial: '⏱',
                 name: 'UK Working Hours',
                 role: '9am to 5:30pm GMT',
-                bio: 'The entire team operates on UK working hours as standard. During January and year-end peak periods, hours extend to match UK demand.',
+                bio: 'The entire team operates on UK working hours as standard. During January and year end peak periods, hours extend to match UK demand.',
               },
             ].map((member) => (
               <motion.div

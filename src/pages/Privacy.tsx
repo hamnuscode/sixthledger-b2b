@@ -29,7 +29,7 @@ export default function Privacy() {
             <h2>1. Who we are</h2>
             <p>
               Sixth Ledger (SIXTHLEDGER (PVT) LTD), headquartered in Islamabad,
-              Pakistan, operates the b2b.sixthledger.com website and provides white-label accounting
+              Pakistan, operates the b2b.sixthledger.com website and provides white label accounting
               outsourcing services to UK accounting practices. References to "we", "us", and "our"
               mean Sixth Ledger. References to "you" and "your" mean the accounting practice engaging
               our services or visiting this site.
@@ -81,9 +81,9 @@ export default function Privacy() {
               full IDTA documentation. We provide this within one business day.
             </p>
 
-            <h2>5. Sub-processors</h2>
+            <h2>5. Sub processors</h2>
             <p>
-              We use a limited set of sub-processors to deliver our services. These include:
+              We use a limited set of sub processors to deliver our services. These include:
             </p>
             <ul>
               <li>Xero Limited (accounting software, UK/NZ)</li>
@@ -94,8 +94,8 @@ export default function Privacy() {
               <li>Microsoft Corporation (Office 365, secure file exchange)</li>
             </ul>
             <p>
-              Our full sub-processor list is provided as part of our GDPR pack, available on request.
-              We notify client practices of any material changes to our sub-processor list at least
+              Our full sub processor list is provided as part of our GDPR pack, available on request.
+              We notify client practices of any material changes to our sub processor list at least
               30 days in advance.
             </p>
 

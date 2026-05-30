@@ -105,7 +105,7 @@ export default function ServiceDetail() {
                 <p className="font-body text-base text-bone leading-loose mb-6">
                   We offer three engagement structures for this service: per-job (you pay for
                   each task individually), monthly retainer (fixed fee for an agreed monthly
-                  scope), or full allocation (a dedicated resource block for high-volume needs).
+                  scope), or full allocation (a dedicated resource block for high volume needs).
                   Specific pricing is confirmed at the discovery call based on your client mix
                   and expected volume.
                 </p>

@@ -5,9 +5,9 @@ import { Reveal, Stagger, item } from '../ui/Reveal'
 const models = [
   {
     eyebrow: '01, Flexible',
-    name: 'Per-Job',
+    name: 'Per Job',
     tagline: 'Pay for what you need, when you need it.',
-    description: 'Suitable for practices that need occasional overflow capacity, a batch of self-assessments in January, a year-end crunch, or a one-off VAT return.',
+    description: 'Suitable for practices that need occasional overflow capacity, a batch of self assessments in January, a year end crunch, or a one off VAT return.',
     features: [
       'Priced per completed job or task',
       'No monthly commitment',

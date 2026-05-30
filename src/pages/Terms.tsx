@@ -30,20 +30,20 @@ export default function Terms() {
             <p>
               These Terms of Service govern the relationship between SIXTHLEDGER (PVT) LTD
               ("Sixth Ledger", "we", "us") and the UK accounting practice ("Client", "you") that
-              engages our white-label accounting outsourcing services. By engaging our services or
+              engages our white label accounting outsourcing services. By engaging our services or
               completing a discovery call, you agree to these terms.
             </p>
 
             <h2>2. Services</h2>
             <p>
-              Sixth Ledger provides white-label accounting and compliance outsourcing services
+              Sixth Ledger provides white label accounting and compliance outsourcing services
               to UK accounting practices. Services are delivered under the Client's own brand.
               The specific scope of services for each engagement is confirmed in a separate
               Service Agreement or Statement of Work agreed between both parties.
             </p>
             <p>
               Service lines available include bookkeeping, payroll and RTI, VAT returns,
-              year-end accounts, management accounts, self-assessment, CIS returns, company
+              year end accounts, management accounts, self assessment, CIS returns, company
               secretarial services, and annual accounts. The scope of any engagement is
               defined at the discovery call and confirmed in writing before work commences.
             </p>
@@ -62,7 +62,7 @@ export default function Terms() {
               client data on an informal or verbal basis.
             </p>
 
-            <h2>4. White-label obligation</h2>
+            <h2>4. White label obligation</h2>
             <p>
               Sixth Ledger delivers all work under the Client's own brand. We do not contact
               the Client's end-clients directly unless explicitly authorised to do so in writing.
@@ -78,7 +78,7 @@ export default function Terms() {
             <ul>
               <li><strong className="text-pure">Per-job:</strong> Invoiced per completed task or file. Suitable for ad-hoc or low-volume requirements.</li>
               <li><strong className="text-pure">Monthly retainer:</strong> Fixed monthly fee for an agreed scope of recurring services. Reviewed quarterly.</li>
-              <li><strong className="text-pure">Full allocation:</strong> A dedicated resource block for high-volume practices. Priced on a bespoke basis.</li>
+              <li><strong className="text-pure">Full allocation:</strong> A dedicated resource block for high volume practices. Priced on a bespoke basis.</li>
             </ul>
             <p>
               Payment terms are net 14 days from invoice date unless otherwise agreed. Overdue

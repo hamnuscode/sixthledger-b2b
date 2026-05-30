@@ -37,7 +37,7 @@ export default function Cookies() {
             <h2>2. How we use cookies</h2>
             <p>
               The b2b.sixthledger.com website uses a minimal set of cookies. We do not use
-              advertising cookies, tracking pixels, or third-party analytics that build profiles
+              advertising cookies, tracking pixels, or third party analytics that build profiles
               of individual users across websites.
             </p>
 
@@ -100,7 +100,7 @@ export default function Cookies() {
               </table>
             </div>
 
-            <h3>Third-party cookies</h3>
+            <h3>Third party cookies</h3>
             <p>
               If you use the calendar booking widget (powered by Cal.com) to schedule a discovery
               call, Cal.com may set its own cookies to manage the booking flow. These are subject

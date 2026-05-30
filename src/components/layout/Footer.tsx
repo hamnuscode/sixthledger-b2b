@@ -32,7 +32,7 @@ export default function Footer() {
                   ZA (pending)
                 </a>
               </p>
-              <p className="font-mono text-xs text-ash uppercase tracking-label">ACCA-led delivery</p>
+              <p className="font-mono text-xs text-ash uppercase tracking-label">ACCA led delivery</p>
               
             </div>
           </div>

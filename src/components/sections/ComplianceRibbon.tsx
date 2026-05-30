@@ -4,8 +4,8 @@ import { Stagger, item } from '../ui/Reveal'
 const badges = [
   { code: 'ICO', title: 'ICO Registered', subtitle: "UK Information Commissioner's Office" },
   { code: 'GDPR', title: 'UK GDPR', subtitle: 'DPA signed before every engagement' },
-  { code: 'IDTA', title: 'IDTA-Ready', subtitle: 'International data transfer compliant' },
-  { code: 'ACCA', title: 'ACCA-Led', subtitle: 'Every output reviewed by a qualified accountant' },
+  { code: 'IDTA', title: 'IDTA Ready', subtitle: 'International data transfer compliant' },
+  { code: 'ACCA', title: 'ACCA Led', subtitle: 'Every output reviewed by a qualified accountant' },
 ]
 
 export default function ComplianceRibbon() {
@@ -25,7 +25,7 @@ export default function ComplianceRibbon() {
           <div>
             <p className="font-display text-xl text-pure mb-1">Data protection by design</p>
             <p className="font-body text-sm text-ash leading-relaxed">
-              ICO registered. UK GDPR compliant. DPA signed before every engagement. IDTA-ready for international transfers.
+              ICO registered. UK GDPR compliant. DPA signed before every engagement. IDTA ready for international transfers.
             </p>
           </div>
         </div>

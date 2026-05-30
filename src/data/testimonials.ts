@@ -8,7 +8,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote: 'We handled our January self assessment overflow through Sixth Ledger. Turnaround was faster than our internal team and the quality held up across every return.',
-    name: 'Practice Manager, 12-partner firm, South East England',
+    name: 'Practice Manager, 12 partner firm, South East England',
     business: '',
     service: 'Self Assessment',
   },

@@ -52,7 +52,7 @@ export default function Hero() {
         >
           <p className="eyebrow">For UK accounting practices</p>
           <p className="font-mono text-xs text-ash uppercase tracking-label hidden md:block">
-            ACCA-Led · ICO Registered · UK GDPR
+            ACCA Led · ICO Registered · UK GDPR
           </p>
         </motion.div>
 
@@ -77,7 +77,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: EASE, delay: 0.22 }}
         >
-          White-label accounting support for UK practices. We work inside your systems, complete the work to your standards, and return it review-ready. Fixed capacity. No recruitment. No drama.
+          White label accounting support for UK practices. We work inside your systems, complete the work to your standards, and return it review ready. Fixed capacity. No recruitment. No drama.
         </motion.p>
 
         {/* Two-column: left copy/CTA, right VSL */}
@@ -91,7 +91,7 @@ export default function Hero() {
           <div className="flex flex-col gap-8">
             {/* Compliance badges */}
             <div className="flex flex-wrap gap-y-2 gap-x-0" aria-label="Compliance credentials">
-              {['ICO Registered', 'ACCA-Led', 'UK GDPR Compliant', 'IDTA-Ready', 'MTD Ready'].map((badge, i) => (
+              {['ICO Registered', 'ACCA Led', 'UK GDPR Compliant', 'IDTA Ready', 'MTD Ready'].map((badge, i) => (
                 <span key={badge} className="flex items-center">
                   {i > 0 && <span className="text-smoke/60 mx-2.5 font-mono text-xs" aria-hidden="true">·</span>}
                   <span className="font-mono text-xs text-ash uppercase tracking-label">{badge}</span>

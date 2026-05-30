@@ -73,7 +73,7 @@ export default function CapacitySection() {
               "Your overflow. Fully prepared. Back in your inbox. Ready to file."
             </p>
             <p className="font-mono text-xs text-lime uppercase tracking-label md:text-right">
-              White-label. Invisible. Ready now.
+              White label. Invisible. Ready now.
             </p>
           </div>
         </Reveal>

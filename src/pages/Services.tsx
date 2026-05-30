@@ -33,7 +33,7 @@ export default function Services() {
             </p>
           </div>
           <p className="font-body text-bone text-lg leading-loose max-w-2xl mt-8">
-            Every service delivered white-label, reviewed by ACCA-qualified professionals,
+            Every service delivered white label, reviewed by ACCA qualified professionals,
             and returned to you ready for client delivery.
           </p>
         </div>

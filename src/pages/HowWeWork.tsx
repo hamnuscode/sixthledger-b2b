@@ -39,7 +39,7 @@ const onboardingSteps = [
 const principles = [
   {
     number: '01',
-    title: 'White-label by default',
+    title: 'White label by default',
     body: 'We work under your credentials and deliver to you. Your clients see your practice name, not ours. This is not optional, it is how we operate on every engagement.',
   },
   {
