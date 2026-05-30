@@ -57,7 +57,10 @@ export default function WhyChooseUs() {
               className={`group p-10 ${i < 2 ? 'border-b border-smoke' : ''} hover:bg-coal transition-colors duration-200 cursor-default`}
             >
               <span
-                className="font-display text-6xl text-smoke/20 italic leading-none block mb-6 group-hover:text-smoke/40 transition-colors duration-300"
+                className="font-display text-6xl italic leading-none block mb-6 transition-colors duration-300"
+                style={{ color: 'rgba(200,232,74,0.25)' }}
+                onMouseEnter={e => (e.currentTarget.style.color = 'rgba(200,232,74,0.55)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(200,232,74,0.25)')}
                 aria-hidden="true"
               >
                 {reason.numeral}
