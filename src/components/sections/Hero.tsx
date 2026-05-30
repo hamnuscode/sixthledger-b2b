@@ -66,59 +66,52 @@ export default function Hero() {
           <span className="italic" style={{ color: 'var(--ash)' }}>Keep your clients.</span>
         </motion.h1>
 
-        {/* VSL */}
+        {/* Two-column: small VSL left, compliance + CTA right */}
         <motion.div
-          className="mb-8"
+          className="grid md:grid-cols-12 gap-8 pt-7 border-t border-smoke"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.28 }}
+          transition={{ duration: 0.7, ease: EASE, delay: 0.28 }}
         >
-          <VSLPlayer />
-        </motion.div>
+          {/* Left: small VSL */}
+          <div className="md:col-span-5">
+            <VSLPlayer />
+          </div>
 
-        {/* Compliance strip */}
-        <motion.div
-          className="flex flex-wrap gap-x-6 gap-y-2 mt-6 pt-6 border-t border-smoke/40"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.54 }}
-          aria-label="Compliance credentials"
-        >
-          {['ICO Registered', 'ACCA-Led', 'UK GDPR Compliant', 'IDTA-Ready', 'MTD Ready'].map((badge, i) => (
-            <span key={badge} className="flex items-center gap-3">
-              {i > 0 && <span className="text-smoke/60 font-mono" aria-hidden="true">/</span>}
-              <span className="font-mono text-xs text-ash uppercase tracking-label">{badge}</span>
-            </span>
-          ))}
-        </motion.div>
-
-        {/* Calendly booking strip */}
-        <motion.div
-          className="border-t border-smoke mt-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-        >
-          <div className="grid md:grid-cols-12 items-center gap-6 py-5">
-            <div className="md:col-span-8">
-              <p className="eyebrow mb-1">Discovery call</p>
-              <p className="font-display text-xl text-pure">
-                Book a 20-minute call. No sales deck. No pressure.
-              </p>
+          {/* Right: compliance + Calendly */}
+          <div className="md:col-span-7 flex flex-col justify-between gap-6">
+            {/* Compliance badges */}
+            <div className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Compliance credentials">
+              {['ICO Registered', 'ACCA-Led', 'UK GDPR Compliant', 'IDTA-Ready', 'MTD Ready'].map((badge, i) => (
+                <span key={badge} className="flex items-center gap-3">
+                  {i > 0 && <span className="text-smoke/60 font-mono" aria-hidden="true">/</span>}
+                  <span className="font-mono text-xs text-ash uppercase tracking-label">{badge}</span>
+                </span>
+              ))}
             </div>
-            <div className="md:col-span-4 flex md:justify-end">
-              <a
-                href="https://calendly.com/sixthledger"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-lime text-obsidian font-body font-semibold text-sm px-7 py-3.5 hover:bg-lime-soft active:scale-[0.98] transition-all duration-150"
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.8"/>
-                  <path d="M3 9h18M8 2v4M16 2v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-                </svg>
-                Book on Calendly
-              </a>
+
+            {/* Calendly CTA */}
+            <div className="border-t border-smoke pt-5">
+              <p className="eyebrow mb-1">Discovery call</p>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <p className="font-display text-xl text-pure">
+                  Book a 20-minute call. No sales deck. No pressure.
+                </p>
+                <div className="flex md:justify-end flex-shrink-0">
+                  <a
+                    href="https://calendly.com/sixthledger"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2.5 bg-lime text-obsidian font-body font-semibold text-sm px-6 py-3 hover:bg-lime-soft active:scale-[0.98] transition-all duration-150"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.8"/>
+                      <path d="M3 9h18M8 2v4M16 2v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                    </svg>
+                    Book on Calendly
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
