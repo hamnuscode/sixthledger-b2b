@@ -77,7 +77,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: EASE, delay: 0.22 }}
         >
-          White label accounting support for UK practices. We work inside your systems, complete the work to your standards, and return it review ready. Fixed capacity. No recruitment. No drama.
+          White label ACCA qualified accounting support for UK practices. Embedded in your workflow. Built for peak capacity periods. Fully compliant.
         </motion.p>
 
         {/* Two-column: left copy/CTA, right VSL */}

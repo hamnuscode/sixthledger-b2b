@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'framer-motion'
 
 const stats = [
-  { value: '3+2', label: 'ACCA Qualified\n& Finalists', numeric: false },
+  { value: '5', label: 'ACCA Qualified\nor Finalists', numeric: false },
   { value: '9', label: 'Service\nLines', numeric: true },
   { value: '4', label: 'Cloud\nPlatforms', numeric: true },
   { value: 'UK', label: 'Working\nHours', numeric: false },

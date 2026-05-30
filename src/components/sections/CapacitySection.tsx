@@ -5,7 +5,7 @@ const painPoints = [
   {
     number: '01',
     title: 'January arrives.',
-    body: 'You are already out of hours. Self assessment volume peaks, your team is at capacity, and the work keeps coming.',
+    body: 'You are already out of hours.',
   },
   {
     number: '02',
@@ -15,7 +15,7 @@ const painPoints = [
   {
     number: '03',
     title: 'Hiring takes months.',
-    body: 'The workload peaks next week. New staff arrive after the pressure is gone. You carry the cost either way.',
+    body: 'The workload peaks next week. New staff arrive after the pressure is gone.',
   },
 ]
 

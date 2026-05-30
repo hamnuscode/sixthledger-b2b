@@ -43,7 +43,7 @@ export default function ClosingCTA() {
         <Reveal delay={0.2}>
           <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-smoke mt-12">
             <p className="font-body text-bone text-lg leading-loose">
-              No contract. No minimum volume. No long term commitment. Send us one piece of work, see what comes back, and take it from there.
+              No contract. No minimum volume. No long term commitment. Send us one live job and judge the output for yourself.
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-5">
               <Button to="/contact" size="lg">Book a 20-minute call</Button>

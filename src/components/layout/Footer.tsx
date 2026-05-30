@@ -111,7 +111,7 @@ export default function Footer() {
         {/* Bottom strip */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-6">
           <p className="font-mono text-xs text-ash uppercase tracking-label">
-            © {new Date().getFullYear()} SIXTHLEDGER (PVT) LTD
+            © 2026 SIXTHLEDGER (PVT) LTD. Built for UK accounting practices.
           </p>
           <div className="flex flex-wrap gap-6">
               <a href="https://drive.google.com/drive/folders/1FQoRnfnJvz4Ctc_RhHTjiYUhzJZW5bRX?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-ash hover:text-lime transition-colors uppercase tracking-label">Privacy Policy</a>

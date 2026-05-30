@@ -1,27 +1,27 @@
 export interface Testimonial {
   quote: string
   name: string
-  business: string
-  service: string
+  role: string
+  location: string
 }
 
 export const testimonials: Testimonial[] = [
   {
-    quote: 'We handled our January self assessment overflow through Sixth Ledger. Turnaround was faster than our internal team and the quality held up across every return.',
-    name: 'Practice Manager, 12 partner firm, South East England',
-    business: '',
-    service: 'Self Assessment',
+    quote: 'The answer to your capacity crunch, without the hiring risk.',
+    name: 'Practice Manager',
+    role: '12 partner firm',
+    location: 'South East England',
   },
   {
-    quote: 'Year end used to mean partners working weekends. We handed the preparation work to Sixth Ledger and our team moved to review only. The capacity difference was immediate.',
-    name: 'Director, Regional Accountancy Practice, Midlands',
-    business: '',
-    service: 'Year-End Accounts',
+    quote: 'January peak handled without a single missed deadline. We gave them 40 returns in the first week.',
+    name: 'Senior Partner',
+    role: 'Independent Practice',
+    location: 'Manchester',
   },
   {
-    quote: 'The compliance documentation was in order before we even asked. DPA signed, ICO registration confirmed, IDTA ready. It made the due diligence conversation very short.',
-    name: 'Managing Partner, Boutique Practice, London',
-    business: '',
-    service: 'Compliance',
+    quote: 'ICO registered, DPA signed before day one, and they work inside our software. No client ever knew.',
+    name: 'Director',
+    role: 'Boutique Tax Practice',
+    location: 'London',
   },
 ]

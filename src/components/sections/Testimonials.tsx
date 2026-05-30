@@ -48,14 +48,14 @@ export default function Testimonials() {
                 </p>
                 <footer>
                   <p className="font-body text-sm text-bone font-medium">{t.name}</p>
-                  <p className="font-body text-xs text-ash mt-0.5">{t.business}</p>
+                  <p className="font-body text-xs text-ash mt-0.5">{t.role}</p>
                 </footer>
               </div>
 
-              {/* Service tag, right aligned */}
+              {/* Location tag, right aligned */}
               <div className="md:col-span-3 md:flex md:items-start md:justify-end">
                 <span className="font-mono text-xs text-lime uppercase tracking-label">
-                  {t.service}
+                  {t.location}
                 </span>
               </div>
             </motion.blockquote>

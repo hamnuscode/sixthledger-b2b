@@ -40,7 +40,7 @@ export const services: Service[] = [
     id: 'payroll',
     number: '02',
     title: 'Payroll & RTI',
-    shortDescription: 'Full payroll processing with RTI filings, ready for your sign-off before anything is submitted.',
+    shortDescription: 'Full payroll processing with RTI filings, ready for your sign off before anything is submitted.',
     description: 'We process your clients\' payroll ,  calculating net pay, deductions, and employer costs ,  and prepare RTI submissions for your review before they go to HMRC. You approve everything. We do the work.',
     tasks: [
       'Employee gross to net payroll calculation',
@@ -90,7 +90,7 @@ export const services: Service[] = [
     id: 'year-end-accounts',
     number: '04',
     title: 'Year-End Accounts',
-    shortDescription: 'Statutory accounts prepared to FRS 102 or Micro-Entity standard, filed under your practice letterhead.',
+    shortDescription: 'Statutory accounts prepared to FRS 102 or Micro Entity standard, filed under your practice letterhead.',
     description: 'We prepare statutory accounts for your clients\' companies ,  from trial balance to final signed off draft ,  ready for your review, client approval, and Companies House submission. All work is under your practice branding.',
     tasks: [
       'Statutory accounts preparation (FRS 102, FRS 102 Section 1A, FRS 105 Micro-Entity)',
@@ -115,7 +115,7 @@ export const services: Service[] = [
     id: 'management-accounts',
     number: '05',
     title: 'Management Accounts',
-    shortDescription: 'Monthly management packs in your clients\' preferred format ,  P&L, balance sheet, and optional KPI dashboard.',
+    shortDescription: 'Monthly management packs in your clients\' preferred format, P&L, balance sheet, and optional KPI dashboard.',
     description: 'We produce monthly management accounts for your clients on a recurring basis ,  formatted to your template, delivered to your agreed schedule, ready for you to present to the client or deliver directly under your brand.',
     tasks: [
       'Monthly P&L with budget comparison',
@@ -140,7 +140,7 @@ export const services: Service[] = [
     id: 'self-assessment',
     number: '06',
     title: 'Self Assessment',
-    shortDescription: 'Capacity on demand for SA season ,  we prepare, you review, you file.',
+    shortDescription: 'Capacity on demand for SA season, we prepare, you review, you file.',
     description: 'We provide dedicated self assessment capacity during peak season ,  handling the full preparation of SA700/SA100 returns for your clients, ready for your review and submission. Start in October, scale back in February.',
     tasks: [
       'SA100 personal tax return preparation',
@@ -190,7 +190,7 @@ export const services: Service[] = [
     id: 'company-secretarial',
     number: '08',
     title: 'Company Secretarial',
-    shortDescription: 'Confirmation statements, director changes, registered office ,  handled and filed by our team.',
+    shortDescription: 'Confirmation statements, director changes, registered office, handled and filed by our team.',
     description: 'We handle routine company secretarial work for your clients\' companies ,  from confirmation statement preparation to director and shareholder changes ,  filed at Companies House under your practice authorisation.',
     tasks: [
       'Annual confirmation statement (CS01) preparation and filing',
