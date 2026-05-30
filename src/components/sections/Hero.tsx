@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Button from '../ui/Button'
+import VSLPlayer from './VSLPlayer'
 
 const EASE = [0.16, 1, 0.3, 1]
 
@@ -66,23 +66,14 @@ export default function Hero() {
           <span className="italic" style={{ color: 'var(--ash)' }}>Keep your clients.</span>
         </motion.h1>
 
-        {/* Subtext + CTAs */}
+        {/* VSL */}
         <motion.div
-          className="grid md:grid-cols-2 gap-8 pt-7 border-t border-smoke"
-          initial={{ opacity: 0, y: 16 }}
+          className="mb-8"
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.32 }}
+          transition={{ duration: 0.8, ease: EASE, delay: 0.28 }}
         >
-          <div>
-            <p className="font-body text-bone text-xl leading-loose max-w-lg">
-              An ACCA-led team that operates as an invisible extension of your practice.
-              White-label by default. Compliant by design. UK working hours.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-start gap-5">
-            <Button to="/contact" size="lg">Book a 20-minute call</Button>
-            <Button to="/how-we-work" variant="ghost" size="lg">How we work →</Button>
-          </div>
+          <VSLPlayer />
         </motion.div>
 
         {/* Compliance strip */}
