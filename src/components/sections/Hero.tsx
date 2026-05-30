@@ -73,12 +73,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.28 }}
         >
-          {/* Left: small VSL */}
-          <div className="md:col-span-5">
-            <VSLPlayer />
-          </div>
-
-          {/* Right: compliance + Calendly */}
+          {/* Left: compliance + Calendly */}
           <div className="md:col-span-7 flex flex-col justify-between gap-6">
             {/* Compliance badges */}
             <div className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Compliance credentials">
@@ -113,6 +108,11 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Right: VSL */}
+          <div className="md:col-span-5">
+            <VSLPlayer />
           </div>
         </motion.div>
       </div>
