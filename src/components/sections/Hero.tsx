@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: 'var(--obsidian)', paddingTop: '8rem', paddingBottom: '6rem' }}
+      style={{ background: 'var(--obsidian)', paddingTop: '8rem', paddingBottom: '0' }}
       aria-labelledby="hero-headline"
     >
       <div className="container">
@@ -24,14 +24,11 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* Massive headline */}
+        {/* Headline */}
         <motion.h1
           id="hero-headline"
           className="font-display text-5xl sm:text-6xl lg:text-7xl text-pure mb-12"
-          style={{
-            letterSpacing: '-0.03em',
-            lineHeight: '1.0',
-          }}
+          style={{ letterSpacing: '-0.03em', lineHeight: '1.0' }}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.12 }}
@@ -41,7 +38,7 @@ export default function Hero() {
           <span className="italic" style={{ color: 'var(--ash)' }}>Keep your clients.</span>
         </motion.h1>
 
-        {/* Bottom grid: subtext + CTAs */}
+        {/* Subtext + CTAs */}
         <motion.div
           className="grid md:grid-cols-2 gap-12 pt-10 border-t border-smoke"
           initial={{ opacity: 0, y: 16 }}
@@ -68,12 +65,43 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.54 }}
           aria-label="Compliance credentials"
         >
-          {['ICO Registered', 'ACCA-Led', 'UK GDPR Compliant', 'IDTA-Ready', 'MTD Ready'].map((item, i) => (
-            <span key={item} className="flex items-center gap-3">
+          {['ICO Registered', 'ACCA-Led', 'UK GDPR Compliant', 'IDTA-Ready', 'MTD Ready'].map((badge, i) => (
+            <span key={badge} className="flex items-center gap-3">
               {i > 0 && <span className="text-smoke/60 font-mono" aria-hidden="true">/</span>}
-              <span className="font-mono text-xs text-ash uppercase tracking-label">{item}</span>
+              <span className="font-mono text-xs text-ash uppercase tracking-label">{badge}</span>
             </span>
           ))}
+        </motion.div>
+
+        {/* Calendly booking strip — inside hero */}
+        <motion.div
+          className="border-t border-smoke mt-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
+          <div className="grid md:grid-cols-12 items-center gap-6 py-8">
+            <div className="md:col-span-8">
+              <p className="eyebrow mb-1">Discovery call</p>
+              <p className="font-display text-xl text-pure">
+                Book a 20-minute call. No sales deck. No pressure.
+              </p>
+            </div>
+            <div className="md:col-span-4 flex md:justify-end">
+              <a
+                href="https://calendly.com/sixthledger"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-lime text-obsidian font-body font-semibold text-sm px-7 py-3.5 hover:bg-lime-soft active:scale-[0.98] transition-all duration-150"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.8"/>
+                  <path d="M3 9h18M8 2v4M16 2v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                </svg>
+                Book on Calendly
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
