@@ -1,13 +1,41 @@
-import { motion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
+import { motion, useInView } from 'framer-motion'
 import Button from '../ui/Button'
 
 const EASE = [0.16, 1, 0.3, 1]
 
+const stats = [
+  { value: '3+2', label: 'ACCA Qualified\n& Finalists', numeric: false },
+  { value: '9',   label: 'Service\nLines',              numeric: true  },
+  { value: '4',   label: 'Cloud\nPlatforms',            numeric: true  },
+  { value: 'UK',  label: 'Working\nHours',              numeric: false },
+]
+
+function CountUp({ target, active }: { target: number; active: boolean }) {
+  const [display, setDisplay] = useState(0)
+  useEffect(() => {
+    if (!active) return
+    const duration = 900
+    const start = performance.now()
+    const raf = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      setDisplay(Math.round(eased * target))
+      if (progress < 1) requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, [active, target])
+  return <>{display}</>
+}
+
 export default function Hero() {
+  const statsRef = useRef(null)
+  const statsInView = useInView(statsRef, { once: true, margin: '-20px 0px' })
+
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: 'var(--obsidian)', paddingTop: '8rem', paddingBottom: '4rem' }}
+      style={{ background: 'var(--obsidian)', paddingTop: '8rem', paddingBottom: '0' }}
       aria-labelledby="hero-headline"
     >
       <div className="container">
@@ -73,7 +101,7 @@ export default function Hero() {
           ))}
         </motion.div>
 
-        {/* Calendly booking strip — inside hero */}
+        {/* Calendly booking strip */}
         <motion.div
           className="border-t border-smoke mt-10"
           initial={{ opacity: 0 }}
@@ -103,6 +131,32 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
+      </div>
+
+      {/* Stats band — bottom of hero, full bleed coal */}
+      <div ref={statsRef} style={{ background: 'var(--coal)' }} className="border-t border-smoke mt-0">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-smoke">
+            {stats.map((stat, i) => (
+              <div key={stat.label} className={`py-8 px-8 flex flex-col ${i === 0 ? 'pl-0' : ''}`}>
+                <span
+                  className="font-display text-pure block"
+                  style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', letterSpacing: '-0.03em', lineHeight: '1' }}
+                >
+                  {stat.numeric
+                    ? <CountUp target={parseInt(stat.value)} active={statsInView} />
+                    : stat.value}
+                </span>
+                <span
+                  className="font-mono text-xs text-ash uppercase tracking-label mt-3 block leading-relaxed"
+                  style={{ whiteSpace: 'pre-line' }}
+                >
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

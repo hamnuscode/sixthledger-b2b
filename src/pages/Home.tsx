@@ -1,5 +1,4 @@
 import Hero from '../components/sections/Hero'
-import StatBand from '../components/sections/StatBand'
 import CapacitySection from '../components/sections/CapacitySection'
 import ServicesGrid from '../components/sections/ServicesGrid'
 import ComplianceRibbon from '../components/sections/ComplianceRibbon'
@@ -15,7 +14,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <StatBand />
       <CapacitySection />
       <ServicesGrid />
       <ComplianceRibbon />
