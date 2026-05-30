@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: 'var(--obsidian)', paddingTop: '8rem', paddingBottom: '0' }}
+      style={{ background: 'var(--obsidian)', paddingTop: '8rem', paddingBottom: '4rem' }}
       aria-labelledby="hero-headline"
     >
       <div className="container">
